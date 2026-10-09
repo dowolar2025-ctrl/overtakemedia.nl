@@ -57,7 +57,6 @@
   .films { display:grid; grid-template-columns:16fr 9fr; gap:28px; margin-top:40px; align-items:start; }
   .film video { width:100%; display:block; border-radius:6px; background:var(--antraciet); aspect-ratio:16/9; object-fit:cover; box-shadow:0 0 0 1px rgba(200,255,0,0.35), 0 0 14px 2px rgba(200,255,0,0.22); }
   .film.vierkant video { aspect-ratio:1/1; }
-  .film video::-webkit-media-controls-fullscreen-button { display:none; }
   .film h3 { font-weight:800; font-size:18px; margin-top:14px; }
   .film p { color:var(--tekst2); font-size:15px; }
   .volgt { margin-top:28px; color:var(--tekst2); font-size:15px; }
@@ -230,12 +229,12 @@
       <p class="intro">Twee films die laten zien wat we maken: een bedrijfsfilm voor een hovenier en een productfilm voor een servieslijn.</p>
       <div class="films">
         <div class="film" id="film-hovenier">
-          <video src="films/lindehof.mp4" poster="img/lindehof.jpg" controls controlslist="nodownload noplaybackrate nofullscreen" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
+          <video src="films/lindehof.mp4" poster="img/lindehof.jpg" controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
           <h3>Bedrijfsfilm · hovenier</h3>
           <p>Eén minuut, liggend formaat. Voor website en presentaties.</p>
         </div>
         <div class="film vierkant" id="film-servieslijn">
-          <video src="films/collectie-noord.mp4" poster="img/collectie-noord.jpg" controls controlslist="nodownload noplaybackrate nofullscreen" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
+          <video src="films/collectie-noord.mp4" poster="img/collectie-noord.jpg" controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
           <h3>Productfilm · servieslijn</h3>
           <p>Vierkant formaat, voor webshop en social media.</p>
         </div>
