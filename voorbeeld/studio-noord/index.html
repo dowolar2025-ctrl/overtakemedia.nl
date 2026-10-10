@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Studio Noord · Servies en bestek voor elke dag</title>
+<meta name="description" content="Voorbeeldwebsite van Overtake Media voor het verzonnen merk Studio Noord.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --inkt:#2E2620; --zacht:#6E6258; --beige:#EFE4D2; --licht:#FAF6EF; --koper:#A9794A; --koper2:#8C6239; --wit:#FFFFFF; --lijn:#E4D8C4; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:Montserrat, Arial, sans-serif; color:var(--inkt); background:var(--licht); line-height:1.7; font-size:16.5px; }
+  img { display:block; max-width:100%; }
+  a { color:inherit; }
+  h1, h2, h3 { font-family:"Cormorant Garamond", Georgia, serif; font-weight:600; line-height:1.1; }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 24px; }
+
+  .voorbeeldbalk { background:#1E1E24; color:#D6D6DC; font-size:13.5px; text-align:center; padding:9px 16px; }
+  .voorbeeldbalk b { color:#C8FF00; font-weight:700; }
+  .voorbeeldbalk a { color:#fff; margin-left:10px; }
+
+  header { position:sticky; top:0; z-index:20; background:rgba(250,246,239,0.96); backdrop-filter:blur(8px); border-bottom:1px solid var(--lijn); }
+  header .wrap { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-top:16px; padding-bottom:16px; }
+  .logo { text-decoration:none; font-family:"Cormorant Garamond", Georgia, serif; font-weight:700; font-size:28px; letter-spacing:0.14em; text-transform:uppercase; line-height:1; }
+  .logo span { color:var(--koper); }
+  nav { display:flex; align-items:center; gap:28px; font-weight:500; font-size:14.5px; letter-spacing:0.06em; text-transform:uppercase; }
+  nav a { text-decoration:none; }
+  nav a:hover { color:var(--koper2); }
+  .knop { display:inline-block; background:var(--inkt); color:var(--licht); font-weight:700; font-size:14.5px; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:15px 28px; border-radius:2px; transition:background .2s; }
+  .knop:hover { background:var(--koper2); color:var(--wit); }
+  .knop.lijn { background:transparent; color:var(--inkt); border:1.5px solid var(--inkt); }
+  .knop.lijn:hover { background:var(--inkt); color:var(--licht); }
+
+  .hero { background:var(--beige); }
+  .hero.licht { background:var(--licht); border-bottom:1px solid var(--lijn); }
+  .hero .wrap { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; padding-top:72px; padding-bottom:72px; }
+  .hero .klein { font-size:13px; letter-spacing:0.28em; text-transform:uppercase; color:var(--koper2); font-weight:700; margin-bottom:16px; }
+  .hero h1 { font-size:clamp(40px, 5vw, 68px); letter-spacing:-0.5px; }
+  .hero h1 em { font-style:italic; color:var(--koper2); }
+  .hero p { color:var(--zacht); font-size:18px; max-width:40ch; margin:22px 0 32px; }
+  .hero .rij { display:flex; flex-wrap:wrap; gap:14px; }
+  .hero img { width:100%; aspect-ratio:1; object-fit:cover; border-radius:4px; box-shadow:0 30px 60px rgba(46,38,32,0.18); }
+
+  section { padding:88px 0; }
+  .kop { text-align:center; max-width:640px; margin:0 auto 48px; }
+  .label { font-size:12.5px; letter-spacing:0.28em; text-transform:uppercase; color:var(--koper2); font-weight:700; margin-bottom:12px; }
+  h2 { font-size:clamp(34px, 4vw, 52px); }
+  .kop p { margin-top:14px; color:var(--zacht); font-size:17.5px; }
+
+  .producten { display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; }
+  .product img { width:100%; aspect-ratio:1; object-fit:cover; border-radius:4px; }
+  .product h3 { font-size:30px; margin-top:20px; }
+  .product p { color:var(--zacht); font-size:15.5px; margin-top:4px; }
+  .product ul { list-style:none; margin-top:12px; font-size:14.5px; color:var(--inkt); }
+  .product li { padding:7px 0; border-top:1px solid var(--lijn); }
+
+  .tint { background:var(--beige); }
+  .tint .product li { border-top-color:#D9CBB2; }
+  .stappen { display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; }
+  .stap { border-top:2px solid var(--koper); padding-top:20px; }
+  .stap b { font-family:"Cormorant Garamond", Georgia, serif; font-size:22px; color:var(--koper2); font-weight:600; }
+  .stap h3 { font-size:30px; margin:6px 0 8px; }
+  .stap p { color:var(--zacht); font-size:15.5px; }
+  .film { background:var(--inkt); color:var(--beige); }
+  .film .wrap { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  .film h2 { color:var(--licht); }
+  .film .label { color:#D9B48A; }
+  .film p { margin-top:16px; color:#CFC3B2; font-size:17.5px; max-width:42ch; }
+  .film video { width:100%; display:block; aspect-ratio:1; object-fit:cover; border-radius:4px; background:#000; box-shadow:0 0 0 1px rgba(217,180,138,0.6), 0 0 44px 8px rgba(217,180,138,0.22); }
+
+  .sfeer .wrap { display:grid; grid-template-columns:1.15fr 1fr; gap:56px; align-items:center; }
+  .sfeer img { width:100%; border-radius:4px; }
+  .sfeer p { margin-top:16px; color:var(--zacht); font-size:17.5px; max-width:44ch; }
+  .sfeer .feit { margin-top:26px; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .sfeer .feit div { border-top:2px solid var(--koper); padding-top:12px; font-size:15px; }
+  .sfeer .feit b { display:block; font-family:"Cormorant Garamond", Georgia, serif; font-size:26px; font-weight:600; line-height:1.1; }
+
+  .contact { background:var(--beige); text-align:center; }
+  .contact p { color:var(--zacht); font-size:17.5px; max-width:44ch; margin:14px auto 28px; }
+  .contact .rij { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+  .contact .klein { margin-top:22px; font-size:14px; color:var(--zacht); }
+
+  footer { background:var(--inkt); color:#A99D8D; font-size:13.5px; }
+  footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px 24px; padding-top:22px; padding-bottom:22px; }
+  footer a { color:#fff; }
+
+  @media (max-width:900px) {
+    nav a:not(.knop) { display:none; }
+    .hero .wrap, .film .wrap, .sfeer .wrap { grid-template-columns:1fr; gap:32px; }
+    .producten, .stappen { grid-template-columns:1fr; }
+    .hero .wrap { padding-top:48px; padding-bottom:48px; }
+  }
+  @media (max-width:560px) {
+    .wrap { padding:0 16px; }
+    section { padding:60px 0; }
+    .logo { font-size:22px; }
+    .knop { padding:13px 20px; font-size:13.5px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="voorbeeldbalk"><b>Voorbeeld</b> van een website door Overtake Media · Studio Noord is een verzonnen merk <a href="/websites.html">Terug naar Overtake Media</a></div>
+
+<header><div class="wrap">
+  <a class="logo" href="#top">Studio <span>Noord</span></a>
+  <nav>
+    <a href="#studio">Wat we doen</a>
+    <a href="#collectie">Collectie Noord</a>
+    <a href="#film">Film</a>
+    <a class="knop" href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<div class="hero licht" id="top"><div class="wrap">
+  <div>
+    <div class="klein">Studio Noord · tafelgoed</div>
+    <h1>Servies en bestek <em>voor elke dag.</em></h1>
+    <p>Studio Noord ontwerpt servies en bestek dat rustig oogt en tegen een stootje kan. Voor thuis, en voor wie gasten ontvangt.</p>
+    <div class="rij">
+      <a class="knop" href="#studio">Wat we doen</a>
+      <a class="knop lijn" href="#collectie">Nieuw: Collectie Noord</a>
+    </div>
+  </div>
+  <img src="img/kommen.jpg" alt="Witte porseleinen kommen uit Collectie Noord">
+</div></div>
+
+<section id="studio"><div class="wrap">
+  <div class="kop">
+    <div class="label">Wat we doen</div>
+    <h2>Van ontwerp tot gedekte tafel</h2>
+    <p>Wij bedenken, maken en leveren tafelgoed in een eigen, rustige stijl.</p>
+  </div>
+  <div class="stappen">
+    <div class="stap"><b>01</b><h3>Ontwerpen</h3><p>Elke vorm tekenen we zelf: eenvoudig, tijdloos en prettig in de hand.</p></div>
+    <div class="stap"><b>02</b><h3>Maken</h3><p>Fijn wit porselein en roestvrij staal, gemaakt om elke dag te gebruiken.</p></div>
+    <div class="stap"><b>03</b><h3>Leveren</h3><p>Als complete set, zodat alles op tafel bij elkaar past.</p></div>
+  </div>
+</div></section>
+
+<section id="collectie" class="tint"><div class="wrap">
+  <div class="kop">
+    <div class="label">Nieuw</div>
+    <h2>Collectie Noord</h2>
+    <p>Onze nieuwste collectie: servies en bestek die bij elkaar horen, in één rustige lijn.</p>
+  </div>
+  <div class="producten">
+    <div class="product"><img src="img/bord.jpg" alt="Wit porseleinen bord" loading="lazy"><h3>Servies Noord</h3><p>Borden en kommen in fijn wit porselein.</p><ul><li>Fijn wit porselein</li><li>Vaatwasserbestendig</li><li>Set voor zes personen</li></ul></div>
+    <div class="product"><img src="img/bestek.jpg" alt="Vork en mes van roestvrij staal" loading="lazy"><h3>Bestek Noord</h3><p>Strak bestek met een zachte glans.</p><ul><li>Roestvrij staal 18/10</li><li>Ligt goed in de hand</li><li>Vaatwasserbestendig</li></ul></div>
+    <div class="product"><img src="img/glazen.jpg" alt="Wijnglazen op een gedekte tafel" loading="lazy"><h3>Aan tafel</h3><p>Alles voor een tafel waar je graag aanschuift.</p><ul><li>Sfeervol tafelen</li><li>Past bij elk interieur</li><li>Voor elke dag en voor feest</li></ul></div>
+  </div>
+</div></section>
+
+<section class="film" id="film"><div class="wrap">
+  <div>
+    <div class="label">De film</div>
+    <h2>Collectie Noord in beeld</h2>
+    <p>In een halve minuut zie je het servies, het bestek en de sfeer van de collectie.</p>
+  </div>
+  <video src="../../films/collectie-noord.mp4" poster="../../img/collectie-noord.jpg" controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
+</div></section>
+
+<section class="sfeer" id="tafel"><div class="wrap">
+  <img src="img/tafel.jpg" alt="Feestelijk gedekte tafel met kaarsen" loading="lazy">
+  <div>
+    <div class="label">Aan tafel</div>
+    <h2>Sfeervol tafelen</h2>
+    <p>Een goed gedekte tafel begint met servies dat rustig is en tegen een stootje kan. Collectie Noord is gemaakt om elke dag te gebruiken.</p>
+    <div class="feit">
+      <div><b>Zes personen</b>één complete set</div>
+      <div><b>Staal 18/10</b>bestek dat mooi blijft</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="label">Contact</div>
+  <h2>Meer weten over Studio Noord?</h2>
+  <p>Vraag de brochure van onze collecties aan of stel je vraag. We helpen je graag verder.</p>
+  <div class="rij">
+    <a class="knop" href="#contact">Vraag de brochure aan</a>
+    <a class="knop lijn" href="#contact">Stuur een mail</a>
+  </div>
+  <div class="klein">Dit is een voorbeeld: de knoppen werken hier niet.</div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Studio Noord · verzonnen merk</span>
+  <span>Voorbeeldwebsite en film door <a href="/">Overtake Media</a></span>
+</div></footer>
+
+</body>
+</html>

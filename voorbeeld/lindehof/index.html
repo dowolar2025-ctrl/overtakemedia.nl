@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lindehof Hoveniers · Ontwerp, aanleg en onderhoud</title>
+<meta name="description" content="Voorbeeldwebsite van Overtake Media voor het verzonnen bedrijf Lindehof Hoveniers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --groen:#1F4D3A; --groen2:#2C6A50; --zand:#EFE6D2; --zand2:#F8F4EA; --blad:#9CCB6B; --tekst:#2B3A33; --zacht:#5F6F66; --wit:#FFFFFF; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:Montserrat, Arial, sans-serif; color:var(--tekst); background:var(--zand2); line-height:1.7; font-size:17px; }
+  img { display:block; max-width:100%; }
+  a { color:inherit; }
+  h1, h2, h3 { font-family:Lora, Georgia, serif; color:var(--groen); line-height:1.15; }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 24px; }
+
+  .voorbeeldbalk { background:#1E1E24; color:#D6D6DC; font-size:13.5px; text-align:center; padding:9px 16px; }
+  .voorbeeldbalk b { color:#C8FF00; font-weight:700; }
+  .voorbeeldbalk a { color:#fff; margin-left:10px; }
+
+  header { position:sticky; top:0; z-index:20; background:rgba(248,244,234,0.96); backdrop-filter:blur(8px); border-bottom:1px solid #E2D9C3; }
+  header .wrap { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-top:14px; padding-bottom:14px; }
+  .logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .logo svg { width:40px; height:40px; color:var(--groen2); }
+  .logo .naam { font-family:Lora, Georgia, serif; font-weight:700; font-size:25px; color:var(--groen); line-height:1; }
+  .logo .sub { font-size:10.5px; letter-spacing:0.42em; color:var(--zacht); margin-top:5px; font-weight:500; }
+  nav { display:flex; align-items:center; gap:26px; font-weight:500; font-size:15.5px; }
+  nav a { text-decoration:none; }
+  nav a:hover { color:var(--groen2); }
+  .knop { display:inline-block; background:var(--groen); color:var(--wit); font-weight:700; text-decoration:none; padding:13px 24px; border-radius:999px; transition:background .2s; }
+  .knop:hover { background:var(--groen2); color:var(--wit); }
+  .knop.licht { background:var(--zand); color:var(--groen); }
+  .knop.licht:hover { background:var(--wit); color:var(--groen); }
+
+  .hero { position:relative; min-height:76vh; display:flex; align-items:center; color:var(--wit); background:var(--groen) url("img/hero.jpg") center/cover no-repeat; }
+  .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(20,48,36,0.86) 0%, rgba(20,48,36,0.58) 46%, rgba(20,48,36,0.10) 100%); }
+  .hero .wrap { position:relative; width:100%; padding-top:72px; padding-bottom:72px; }
+  .hero h1 { color:var(--wit); font-weight:700; font-size:clamp(36px, 5.6vw, 68px); max-width:14ch; }
+  .hero h1 em { font-style:italic; color:var(--blad); }
+  .hero p { font-size:clamp(17px, 1.6vw, 20px); max-width:42ch; margin:22px 0 30px; }
+  .hero .rij { display:flex; flex-wrap:wrap; gap:14px; }
+
+  section { padding:84px 0; }
+  .kop { max-width:680px; margin-bottom:42px; }
+  .label { color:var(--groen2); font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:12px; }
+  h2 { font-weight:700; font-size:clamp(28px, 3.4vw, 42px); }
+  .kop p { margin-top:14px; font-size:18px; color:var(--zacht); }
+
+  .diensten { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+  .dienst { background:var(--wit); border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(31,77,58,0.08); }
+  .dienst img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .dienst div { padding:24px 24px 28px; }
+  .dienst h3 { font-size:24px; margin-bottom:8px; }
+  .dienst p { font-size:15.5px; color:var(--zacht); }
+
+  .film { background:var(--groen); color:var(--zand); }
+  .film h2 { color:var(--wit); }
+  .film .label { color:var(--blad); }
+  .film .kop p { color:#CFE0D4; }
+  .film video { width:100%; display:block; aspect-ratio:16/9; object-fit:cover; border-radius:16px; background:#000; box-shadow:0 0 0 2px rgba(156,203,107,0.6), 0 0 40px 8px rgba(156,203,107,0.25); }
+
+  .zeker { display:grid; grid-template-columns:repeat(3, 1fr); gap:22px; }
+  .punt { background:var(--zand); border-radius:16px; padding:28px 26px; }
+  .punt .vink { width:46px; height:46px; border-radius:50%; background:var(--groen); display:grid; place-items:center; margin-bottom:16px; }
+  .punt .vink svg { width:24px; height:24px; }
+  .punt h3 { font-size:22px; margin-bottom:6px; }
+  .punt p { font-size:15.5px; color:var(--zacht); }
+
+  .werk { background:var(--wit); }
+  .galerij { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+  .galerij img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
+
+  .contact { background:var(--zand); text-align:center; }
+  .contact p { font-size:18px; color:var(--zacht); max-width:46ch; margin:14px auto 28px; }
+  .contact .rij { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+  .contact .klein { margin-top:22px; font-size:14px; color:var(--zacht); }
+
+  footer { background:var(--groen); color:#B9CDBF; font-size:13.5px; }
+  footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px 24px; padding-top:22px; padding-bottom:22px; }
+  footer a { color:#fff; }
+
+  @media (max-width:900px) {
+    nav a:not(.knop) { display:none; }
+    .diensten, .zeker { grid-template-columns:1fr; }
+    .galerij { grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:560px) {
+    body { font-size:16px; }
+    .wrap { padding:0 16px; }
+    section { padding:58px 0; }
+    .logo .naam { font-size:21px; }
+    .knop { padding:12px 18px; font-size:15px; }
+    .hero { min-height:70vh; }
+  }
+</style>
+</head>
+<body>
+
+<div class="voorbeeldbalk"><b>Voorbeeld</b> van een website door Overtake Media · Lindehof Hoveniers is een verzonnen bedrijf <a href="/websites.html">Terug naar Overtake Media</a></div>
+
+<header><div class="wrap">
+  <a class="logo" href="#top">
+    <svg viewBox="0 0 64 64"><path d="M8 58 C6 30 24 8 58 6 C60 40 38 60 8 58 Z" fill="currentColor"/><path d="M10 56 C24 42 36 30 50 15" stroke="#F8F4EA" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+    <div><div class="naam">Lindehof</div><div class="sub">HOVENIERS</div></div>
+  </a>
+  <nav>
+    <a href="#diensten">Wat we doen</a>
+    <a href="#film">Film</a>
+    <a href="#werk">Ons werk</a>
+    <a class="knop" href="#contact">Tuinadvies</a>
+  </nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <h1>Een tuin waar je <em>elke dag</em> van geniet.</h1>
+  <p>Lindehof ontwerpt, legt aan en onderhoudt tuinen in de hele regio. Van het eerste schetsje tot de laatste plant.</p>
+  <div class="rij">
+    <a class="knop licht" href="#contact">Vraag een vrijblijvend tuinadvies aan</a>
+  </div>
+</div></div>
+
+<section id="diensten"><div class="wrap">
+  <div class="kop">
+    <div class="label">Wat we doen</div>
+    <h2>Ontwerp, aanleg en onderhoud</h2>
+    <p>Eén hovenier voor de hele tuin. Vakwerk, met oog voor detail.</p>
+  </div>
+  <div class="diensten">
+    <div class="dienst"><img src="img/ontwerp.jpg" alt="Tuinontwerp op papier" loading="lazy"><div><h3>Ontwerp</h3><p>We tekenen jouw tuin uit, zodat je vooraf ziet wat je krijgt.</p></div></div>
+    <div class="dienst"><img src="img/aanleg.jpg" alt="Bestrating in aanleg" loading="lazy"><div><h3>Aanleg</h3><p>Bestrating, beplanting en gazon, door ons eigen team aangelegd.</p></div></div>
+    <div class="dienst"><img src="img/onderhoud.jpg" alt="Planten verzorgen in de tuin" loading="lazy"><div><h3>Onderhoud</h3><p>Snoeien, maaien en bijhouden, zodat je tuin mooi blijft.</p></div></div>
+  </div>
+</div></section>
+
+<section class="film" id="film"><div class="wrap">
+  <div class="kop">
+    <div class="label">In één minuut</div>
+    <h2>Zo werkt Lindehof</h2>
+    <p>Onze film laat zien wat we doen en hoe we werken.</p>
+  </div>
+  <video src="../../films/lindehof.mp4" poster="../../img/lindehof.jpg" controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kop">
+    <div class="label">Waar je op kunt rekenen</div>
+    <h2>Duidelijk vanaf de eerste dag</h2>
+  </div>
+  <div class="zeker">
+    <div class="punt"><div class="vink"><svg viewBox="0 0 32 32"><path d="M7 17 L13 23 L25 9" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Eén aanspreekpunt</h3><p>Je hebt van begin tot eind met dezelfde persoon te maken.</p></div>
+    <div class="punt"><div class="vink"><svg viewBox="0 0 32 32"><path d="M7 17 L13 23 L25 9" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Prijs vooraf</h3><p>Je weet wat het kost voordat de eerste schop de grond in gaat.</p></div>
+    <div class="punt"><div class="vink"><svg viewBox="0 0 32 32"><path d="M7 17 L13 23 L25 9" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Netjes achtergelaten</h3><p>Als wij klaar zijn, kun jij meteen genieten.</p></div>
+  </div>
+</div></section>
+
+<section class="werk" id="werk"><div class="wrap">
+  <div class="kop">
+    <div class="label">Ons werk</div>
+    <h2>Van de eerste zonnestraal tot een zomeravond op je terras</h2>
+  </div>
+  <div class="galerij">
+    <img src="img/veranda.jpg" alt="Veranda met verlichting in de avond" loading="lazy">
+    <img src="img/bloemen.jpg" alt="Bloemen in de border" loading="lazy">
+    <img src="img/struiken.jpg" alt="Groene beplanting langs een pad" loading="lazy">
+    <img src="img/lantaarn.jpg" alt="Lantaarn op een tuintafel" loading="lazy">
+    <img src="img/blad.jpg" alt="Blad met dauwdruppels" loading="lazy">
+    <img src="img/aanleg.jpg" alt="Nieuwe bestrating" loading="lazy">
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Benieuwd wat er in jouw tuin kan?</h2>
+  <p>Vraag een vrijblijvend tuinadvies aan. We komen langs, kijken mee en denken met je mee.</p>
+  <div class="rij">
+    <a class="knop" href="#contact">Bel ons</a>
+    <a class="knop licht" href="#contact">Stuur een mail</a>
+  </div>
+  <div class="klein">Dit is een voorbeeld: de knoppen werken hier niet.</div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Lindehof Hoveniers · verzonnen bedrijf · beeld: Pixabay</span>
+  <span>Voorbeeldwebsite en film door <a href="/">Overtake Media</a></span>
+</div></footer>
+
+</body>
+</html>
