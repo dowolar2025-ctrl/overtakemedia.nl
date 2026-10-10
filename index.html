@@ -93,7 +93,7 @@
   .bron { margin-top:14px; font-size:13px; color:var(--tekst2); }
 
   /* werkwijze */
-  .stappen { display:grid; grid-template-columns:repeat(6, 1fr); gap:16px; margin-top:40px; counter-reset:stap; }
+  .stappen { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:40px; counter-reset:stap; }
   .stap { background:var(--wit); padding:24px; border-radius:8px; border:1px solid var(--lijn); }
   .stap::before { counter-increment:stap; content:counter(stap); display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; background:var(--antraciet); color:var(--limoen); font-weight:800; border-radius:50%; margin-bottom:16px; }
   .stap h3 { font-weight:800; font-size:18px; margin-bottom:6px; }
@@ -121,9 +121,6 @@
 
   .omhoog { position:fixed; right:24px; bottom:24px; width:64px; height:64px; border-radius:50%; background:var(--limoen); color:var(--antraciet); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:30px; text-decoration:none; box-shadow:0 6px 20px rgba(0,0,0,0.25); opacity:0; pointer-events:none; transition:opacity .25s; z-index:40; }
   .omhoog.zichtbaar { opacity:1; pointer-events:auto; }
-  @media (max-width:1100px) {
-    .stappen { grid-template-columns:1fr 1fr 1fr; }
-  }
   @media (max-width:860px) {
     .hero { padding:44px 16px 56px; }
     .feiten .wrap { grid-template-columns:1fr; }
