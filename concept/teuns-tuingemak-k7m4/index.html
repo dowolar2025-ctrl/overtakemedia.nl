@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Teun's Tuingemak · Ontwerp en aanleg van onderhoudsvriendelijke tuinen</title>
+<meta name="description" content="Teun's Tuingemak ontwerpt en legt onderhoudsvriendelijke tuinen aan in Tilburg en heel Brabant. Zo mooi kan gemak zijn.">
+<link rel="icon" type="image/png" href="img/logo.png">
+<style>
+  @font-face { font-family: Poppins; font-weight: 400; font-display: swap; src: url("fonts/Poppins-Regular.ttf"); }
+  @font-face { font-family: Poppins; font-weight: 500; font-display: swap; src: url("fonts/Poppins-Medium.ttf"); }
+  @font-face { font-family: Poppins; font-weight: 800; font-display: swap; src: url("fonts/Poppins-ExtraBold.ttf"); }
+  :root { --groen: #6AA13B; --groen-donker: #4f7d29; --blad: #A9DA7A; --donker: #282a2b; --tekst: #333333; --zacht: #f4f6f1; --lijn: #e2e6dc; --wit: #ffffff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Poppins, Arial, sans-serif; color: var(--tekst); background: var(--wit); line-height: 1.65; font-size: 17px; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+  .concept { background: var(--donker); color: #d7d6d6; font-size: 13.5px; text-align: center; padding: 8px 16px; letter-spacing: 0.02em; }
+  .concept b { color: var(--blad); font-weight: 500; }
+
+  header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--lijn); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 12px; padding-bottom: 12px; }
+  header img { height: 46px; width: auto; }
+  nav { display: flex; align-items: center; gap: 28px; font-weight: 500; font-size: 15.5px; }
+  nav a { text-decoration: none; }
+  nav a:hover { color: var(--groen-donker); }
+  .knop { display: inline-block; background: var(--groen); color: var(--wit); font-weight: 800; text-decoration: none; padding: 13px 24px; border-radius: 999px; transition: background .2s, transform .2s; }
+  .knop:hover { background: var(--groen-donker); transform: translateY(-1px); color: var(--wit); }
+  .knop.licht { background: var(--wit); color: var(--donker); }
+  .knop.licht:hover { background: var(--blad); color: var(--donker); }
+
+  .hero { position: relative; min-height: 78vh; display: flex; align-items: flex-end; color: var(--wit); background: var(--donker) url("img/hero.jpg") center/cover no-repeat; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,22,20,0.10) 0%, rgba(20,22,20,0.25) 45%, rgba(20,22,20,0.78) 100%); }
+  .hero .wrap { position: relative; width: 100%; padding-top: 120px; padding-bottom: 72px; }
+  .hero h1 { font-weight: 800; font-size: clamp(38px, 6.4vw, 78px); line-height: 1.04; letter-spacing: -0.5px; max-width: 13ch; }
+  .hero h1 span { color: var(--blad); }
+  .hero p { font-size: clamp(17px, 1.6vw, 21px); max-width: 46ch; margin: 20px 0 30px; }
+  .hero .rij { display: flex; flex-wrap: wrap; gap: 14px; }
+
+  section { padding: 88px 0; }
+  .kop { max-width: 720px; margin-bottom: 44px; }
+  .label { color: var(--groen-donker); font-weight: 800; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
+  h2 { color: var(--donker); font-weight: 800; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.12; letter-spacing: -0.3px; }
+  h2 span { color: var(--groen); }
+  .kop p { margin-top: 16px; font-size: 18px; }
+
+  .film { background: var(--zacht); }
+  .film video { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 18px; background: #000;
+               box-shadow: 0 0 0 3px rgba(106,161,59,0.9), 0 0 46px 12px rgba(106,161,59,0.55), 0 24px 60px rgba(40,42,43,0.18); }
+
+  .stappen { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .stap { background: var(--wit); border: 1px solid var(--lijn); border-radius: 18px; padding: 28px 24px; }
+  .stap .nr { width: 46px; height: 46px; border-radius: 50%; background: var(--groen); color: var(--wit); font-weight: 800; font-size: 20px; display: grid; place-items: center; margin-bottom: 18px; }
+  .stap h3 { color: var(--donker); font-weight: 800; font-size: 20px; line-height: 1.25; margin-bottom: 8px; }
+  .stap p { font-size: 16px; }
+
+  .tegels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .tegel { position: relative; border-radius: 18px; overflow: hidden; background: var(--donker); }
+  .tegel img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .5s; }
+  .tegel:hover img { transform: scale(1.05); }
+  .tegel div { position: absolute; left: 0; right: 0; bottom: 0; padding: 46px 22px 18px; color: var(--wit); background: linear-gradient(0deg, rgba(20,22,20,0.82) 0%, rgba(20,22,20,0) 100%); }
+  .tegel h3 { font-weight: 800; font-size: 21px; line-height: 1.2; }
+  .tegel p { font-size: 15px; opacity: 0.92; }
+
+  .werk { background: var(--donker); color: #e9ebe6; }
+  .werk h2 { color: var(--wit); }
+  .werk .label { color: var(--blad); }
+  .werk .twee { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: center; }
+  .werk .fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .werk .fotos img { border-radius: 14px; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .werk ul { list-style: none; margin-top: 24px; display: grid; gap: 12px; }
+  .werk li { padding-left: 34px; position: relative; font-size: 17px; }
+  .werk li::before { content: ""; position: absolute; left: 0; top: 7px; width: 20px; height: 12px; border-left: 4px solid var(--blad); border-bottom: 4px solid var(--blad); transform: rotate(-45deg) scale(0.8); transform-origin: left top; }
+  .werk li b { color: var(--wit); font-weight: 800; }
+
+  .galerij { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .galerij img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; }
+
+  .gebied { background: var(--zacht); }
+  .gebied .twee { display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; align-items: center; }
+  .gebied figure { border-radius: 18px; overflow: hidden; box-shadow: 0 18px 44px rgba(40,42,43,0.16); position: relative; }
+  .gebied figcaption { position: absolute; right: 10px; bottom: 8px; font-size: 11px; color: #333; background: rgba(255,255,255,0.8); padding: 2px 8px; border-radius: 5px; }
+
+  .nazorg .twee { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+  .nazorg img { border-radius: 18px; width: 100%; }
+  .nazorg blockquote { font-weight: 800; font-size: clamp(24px, 2.8vw, 34px); line-height: 1.25; color: var(--donker); border-left: 8px solid var(--groen); padding-left: 22px; margin-bottom: 20px; }
+
+  .contact { background: var(--groen); color: var(--wit); text-align: center; }
+  .contact h2 { color: var(--wit); }
+  .contact p { font-size: 19px; max-width: 48ch; margin: 16px auto 30px; }
+  .contact .rij { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .contact .gegevens { margin-top: 28px; font-size: 16px; opacity: 0.95; }
+  .contact .gegevens a { font-weight: 500; }
+
+  footer { background: var(--donker); color: #9a9da0; font-size: 13.5px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding-top: 24px; padding-bottom: 24px; }
+
+  @media (max-width: 980px) {
+    nav a:not(.knop) { display: none; }
+    .stappen { grid-template-columns: 1fr 1fr; }
+    .tegels { grid-template-columns: 1fr 1fr; }
+    .galerij { grid-template-columns: repeat(3, 1fr); }
+    .werk .twee, .gebied .twee, .nazorg .twee { grid-template-columns: 1fr; gap: 30px; }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 16px; }
+    section { padding: 60px 0; }
+    header img { height: 36px; }
+    .knop { padding: 12px 18px; font-size: 15px; }
+    .hero { min-height: 72vh; }
+    .hero .wrap { padding-bottom: 44px; }
+    .stappen, .tegels { grid-template-columns: 1fr; }
+    .galerij { grid-template-columns: 1fr 1fr; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Conceptvoorstel</b> van Overtake Media voor Teun's Tuingemak · nog niet openbaar</div>
+
+<header><div class="wrap">
+  <a href="#top"><img src="img/logo.png" alt="Teun's Tuingemak, ontwerp en aanleg onderhoudsvriendelijke tuinen"></a>
+  <nav>
+    <a href="#werkwijze">Werkwijze</a>
+    <a href="#tuinen">Tuinen</a>
+    <a href="#projecten">Projecten</a>
+    <a href="#werkgebied">Werkgebied</a>
+    <a class="knop" href="tel:+31621392439">Bel Teun</a>
+  </nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <h1>Zo mooi kan <span>gemak</span> zijn.</h1>
+  <p>Teun's Tuingemak ontwerpt en legt tuinen aan waar je van geniet, in plaats van aan werkt. In Tilburg en heel Brabant.</p>
+  <div class="rij">
+    <a class="knop" href="#contact">Plan een gesprek aan de keukentafel</a>
+    <a class="knop licht" href="#film">Bekijk de film</a>
+  </div>
+</div></div>
+
+<section class="film" id="film"><div class="wrap">
+  <div class="kop">
+    <div class="label">In anderhalve minuut</div>
+    <h2>Van keukentafel tot <span>tuin</span></h2>
+  </div>
+  <video controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline poster="img/film-start.jpg"><source src="film.mp4" type="video/mp4"></video>
+</div></section>
+
+<section id="werkwijze"><div class="wrap">
+  <div class="kop">
+    <div class="label">Werkwijze</div>
+    <h2>Jouw tuin begint aan de <span>keukentafel</span></h2>
+    <p>Geen catalogus en geen standaardpakket. Teun schuift aan, luistert en zegt gewoon waar het op staat.</p>
+  </div>
+  <div class="stappen">
+    <div class="stap"><div class="nr">1</div><h3>Luisteren en tekenen</h3><p>Hoe wil je leven in je tuin, en wat wil je juist niet? Teun denkt mee en tekent het plan uit.</p></div>
+    <div class="stap"><div class="nr">2</div><h3>De schop de grond in</h3><p>Pas als jij zegt "ja, dit is 'm". Een vaste ploeg vakmensen die al jaren samenwerkt.</p></div>
+    <div class="stap"><div class="nr">3</div><h3>Afspraak is afspraak</h3><p>Loopt het anders dan gedacht, dan lossen we het op. En klaar is bij Teun ook echt klaar.</p></div>
+    <div class="stap"><div class="nr">4</div><h3>Genieten</h3><p>Slim bedacht en makkelijk in onderhoud. De tuin van de keukentafel, maar dan in het echt.</p></div>
+  </div>
+</div></section>
+
+<section id="tuinen" style="padding-top:0"><div class="wrap">
+  <div class="kop">
+    <div class="label">Wat we maken</div>
+    <h2>Groot of klein, <span>maakt ons niks uit</span></h2>
+  </div>
+  <div class="tegels">
+    <div class="tegel"><img src="img/t-nieuwbouw.jpg" alt="Nieuwbouwtuin met witte plantenbakken en schanskorf" loading="lazy"><div><h3>Nieuwbouwtuin</h3><p>Van bouwzand naar complete tuin</p></div></div>
+    <div class="tegel"><img src="img/t-villatuin.jpg" alt="Villatuin met gestreept gazon" loading="lazy"><div><h3>Villatuin</h3><p>Ruim opgezet, strak gazon</p></div></div>
+    <div class="tegel"><img src="img/t-patio.jpg" alt="Strakke patio met hout en cortenstaal" loading="lazy"><div><h3>Patio</h3><p>Hout en cortenstaal</p></div></div>
+    <div class="tegel"><img src="img/t-veranda.jpg" alt="Veranda met glazen wanden" loading="lazy"><div><h3>Veranda</h3><p>In oktober nog buiten zitten</p></div></div>
+    <div class="tegel"><img src="img/t-planten.jpg" alt="Plantentuin met kronkelpad" loading="lazy"><div><h3>Plantentuin</h3><p>Groen dat weinig werk vraagt</p></div></div>
+    <div class="tegel"><img src="img/t-pad.jpg" alt="Bestraat pad naar de voordeur" loading="lazy"><div><h3>Pad en oprit</h3><p>Of gewoon een mooi pad naar de voordeur</p></div></div>
+  </div>
+</div></section>
+
+<section class="werk"><div class="wrap"><div class="twee">
+  <div>
+    <div class="label">De ploeg</div>
+    <h2>Mensen die weten wat ze doen</h2>
+    <ul>
+      <li><b>Een vaste ploeg.</b> Vakmensen die al jaren bij Teun werken.</li>
+      <li><b>Hard, netjes en met plezier.</b> Zo werken we, en zo laten we het achter.</li>
+      <li><b>Nieuw of bestaand.</b> Kale bouwgrond of een tuin die toe is aan iets nieuws.</li>
+      <li><b>Eén aanspreekpunt.</b> Je praat met Teun zelf.</li>
+    </ul>
+  </div>
+  <div class="fotos">
+    <img src="img/werk-bus.jpg" alt="Bus en aanhanger van Teun's Tuingemak" loading="lazy">
+    <img src="img/werk-graver.jpg" alt="Minigraver aan het werk in een nieuwe tuin" loading="lazy">
+  </div>
+</div></div></section>
+
+<section id="projecten"><div class="wrap">
+  <div class="kop">
+    <div class="label">Projecten</div>
+    <h2>Elke tuin is <span>iemands thuis</span></h2>
+  </div>
+  <div class="galerij">
+    <img src="img/g01.jpg" alt="Tuin met gazon, bestrating en plantenbakken" loading="lazy">
+    <img src="img/g02.jpg" alt="Tuin met tuinhuis en stapstenen" loading="lazy">
+    <img src="img/g03.jpg" alt="Achtertuin met gazon en terras" loading="lazy">
+    <img src="img/g04.jpg" alt="Tuin met overkapping en gazon" loading="lazy">
+    <img src="img/g05.jpg" alt="Tuin met houten berging en gazon" loading="lazy">
+    <img src="img/g06.jpg" alt="Houten overkapping met olijfbomen" loading="lazy">
+    <img src="img/g07.jpg" alt="Bloeiende borders langs een klinkerpad" loading="lazy">
+    <img src="img/g08.jpg" alt="Stadstuin met grote tegels en siergrassen" loading="lazy">
+    <img src="img/g09.jpg" alt="Vlonder met Japanse esdoorn" loading="lazy">
+    <img src="img/g10.jpg" alt="Voortuin met grind en witte plantenbakken" loading="lazy">
+    <img src="img/g11.jpg" alt="Bestrating van natuursteen" loading="lazy">
+    <img src="img/g12.jpg" alt="Terras met plantenbak van cortenstaal" loading="lazy">
+  </div>
+</div></section>
+
+<section class="gebied" id="werkgebied"><div class="wrap"><div class="twee">
+  <div>
+    <div class="label">Werkgebied</div>
+    <h2>Tilburg en <span>heel Brabant</span></h2>
+    <p style="margin-top:16px; font-size:18px">Kale bouwgrond bij een nieuw huis, of een tuin die echt toe is aan iets nieuws? Wij komen eraan.</p>
+  </div>
+  <figure><img src="img/werkgebied.jpg" alt="Kaart van Noord-Brabant met het werkgebied rond Tilburg" loading="lazy"><figcaption>© OpenMapTiles · Data © OpenStreetMap-bijdragers</figcaption></figure>
+</div></div></section>
+
+<section class="nazorg"><div class="wrap"><div class="twee">
+  <img src="img/nazorg.jpg" alt="Houten overkapping met verlichting" loading="lazy">
+  <div>
+    <div class="label">Ook daarna</div>
+    <blockquote>Is er nog iets? Je belt gewoon Teun.</blockquote>
+    <p>Als de tuin klaar is, is Teun niet weg. Een vraag een jaar later of iets dat anders moet: je krijgt geen kantoor aan de lijn, maar de man die zelf in jouw tuin heeft gestaan.</p>
+  </div>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Benieuwd wat er in jouw tuin kan?</h2>
+  <p>Bel of app Teun voor een gesprek aan de keukentafel. Vrijblijvend, en met een eerlijk antwoord.</p>
+  <div class="rij">
+    <a class="knop licht" href="tel:+31621392439">Bel 06-21 39 24 39</a>
+    <a class="knop licht" href="mailto:info@teunstuingemak.nl">Mail Teun</a>
+  </div>
+  <div class="gegevens">Teun's Tuingemak · <a href="mailto:info@teunstuingemak.nl">info@teunstuingemak.nl</a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© 2026 Teun's Tuingemak</span>
+  <span>Conceptvoorstel · website en film door Overtake Media</span>
+</div></footer>
+
+</body>
+</html>
