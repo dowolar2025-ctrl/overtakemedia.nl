@@ -130,6 +130,7 @@ footer .wrap { padding:24px; display:flex; justify-content:space-between; flex-w
   .stappen, .opties { grid-template-columns:1fr; }
   table { font-size:14px; }
   th, td { padding:12px 8px; }
+  .tabelvak table { min-width:0; }
 }
 
 /* menu: knop naar het andere onderdeel */
