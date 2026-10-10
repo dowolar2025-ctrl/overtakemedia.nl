@@ -221,7 +221,8 @@
   // kijkvenster: bladeren door vijf schermbeelden van een voorbeeldsite, zonder de pagina te verlaten
   var kv=document.getElementById('kijkvenster'), kb=document.getElementById('kijkbeeld'), naam='', nr=1, AANTAL=5;
   var MATEN={"lindehof":[638,678,851,798,418],"studio-noord":[618,504,879,643,673]};   // hoogte van elk beeld bij 1200 breed: elk beeld is één heel onderdeel van de voorbeeldsite
-  function toon(){ kb.width=1200; kb.height=MATEN[naam][nr-1]; kb.src='img/vb-'+naam+'-'+nr+'.jpg?v=2';   // v=2: opnieuw uitgesneden beelden, zodat de browser geen oude toont document.getElementById('kijkteller').textContent=nr+' van '+AANTAL; }
+  // ?v=2 achter de beeldnaam: opnieuw uitgesneden beelden, zodat de browser geen oude versie toont
+  function toon(){ kb.width=1200; kb.height=MATEN[naam][nr-1]; kb.src='img/vb-'+naam+'-'+nr+'.jpg?v=2'; document.getElementById('kijkteller').textContent=nr+' van '+AANTAL; }
   function sluit(){ kv.hidden=true; document.body.style.overflow=''; }
   function stap(d){ nr=(nr-1+d+AANTAL)%AANTAL+1; toon(); }
   document.querySelectorAll('[data-voorbeeld]').forEach(function(b){
