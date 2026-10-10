@@ -162,7 +162,19 @@ nav a.ander:hover { color:var(--antraciet); filter:brightness(0.95); }
 .venster.los { position:static; inset:auto; aspect-ratio:16/10.6; box-shadow:0 0 0 1px rgba(200,255,0,0.35), 0 0 22px 3px rgba(200,255,0,0.20), 0 18px 44px rgba(30,30,36,0.18); }
 .venster.los .balk { height:34px; flex:none; }
 .voorbeelden { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:40px; }
-.voorbeeld { text-decoration:none; display:block; }
+.voorbeeld { text-decoration:none; display:block; background:none; border:0; padding:0; font:inherit; color:inherit; text-align:left; cursor:pointer; width:100%; }
+.voorbeeld .blader { display:inline-block; color:var(--antraciet); font-weight:700; border-bottom:2px solid var(--limoen); margin-left:4px; }
+.kijkvenster { position:fixed; inset:0; z-index:200; background:rgba(20,20,24,0.88); display:flex; align-items:center; justify-content:center; padding:20px; }
+.kijkvenster[hidden] { display:none; }
+.kijkvak { width:min(1100px, 100%, calc((76vh - 34px) * 1.6)); }
+.kijkkop { display:flex; align-items:center; gap:16px; color:var(--wit); font-weight:800; font-size:18px; margin-bottom:12px; }
+.kijkkop #kijkteller { font-weight:500; font-size:15px; color:#BDBDC6; margin-left:auto; }
+.kijkkop button { background:none; border:0; color:var(--wit); font-size:34px; line-height:1; cursor:pointer; padding:0 4px; }
+.kijkvak .venster.los { aspect-ratio:auto; }
+.kijkvak .venster.los img { cursor:pointer; flex:none; height:auto; }
+.kijkknoppen { display:flex; justify-content:space-between; gap:12px; margin-top:14px; }
+.kijkknoppen button { background:var(--limoen); color:var(--antraciet); border:0; border-radius:4px; font:inherit; font-weight:800; padding:12px 22px; cursor:pointer; }
+.kijkknoppen button:hover { filter:brightness(0.95); }
 .voorbeeld .venster.los { transition:transform .2s; }
 .voorbeeld:hover .venster.los { transform:translateY(-4px); }
 .voorbeeld h3 { font-weight:800; font-size:18px; margin-top:16px; }

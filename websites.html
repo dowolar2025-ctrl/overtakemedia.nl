@@ -119,18 +119,18 @@
   <section id="voorbeeld">
     <div class="wrap">
       <h2>Voorbeelden</h2>
-      <p class="intro">Twee websites zoals wij ze bouwen, elk in een eigen huisstijl en met een eigen film. De bedrijven zijn verzonnen; klik erop om de site te bekijken.</p>
+      <p class="intro">Twee websites zoals wij ze bouwen, elk in een eigen huisstijl en met een eigen film. De bedrijven zijn verzonnen; klik op een voorbeeld om er doorheen te bladeren.</p>
       <div class="voorbeelden">
-        <a class="voorbeeld" href="voorbeeld/lindehof/">
+        <button class="voorbeeld" type="button" data-voorbeeld="lindehof" data-titel="Website · hovenier">
           <div class="venster los"><div class="balk"><i></i><i></i><i></i></div><img src="img/voorbeeld-website.jpg" alt="Voorbeeldwebsite van hovenier Lindehof" loading="lazy"></div>
           <h3>Website · hovenier</h3>
-          <p>Rustig groen en zand, met de bedrijfsfilm erin.</p>
-        </a>
-        <a class="voorbeeld" href="voorbeeld/studio-noord/">
+          <p>Rustig groen en zand, met de bedrijfsfilm erin. <span class="blader">Bekijk de site in 5 beelden</span></p>
+        </button>
+        <button class="voorbeeld" type="button" data-voorbeeld="studio-noord" data-titel="Website · servieslijn">
           <div class="venster los"><div class="balk"><i></i><i></i><i></i></div><img src="img/voorbeeld-website-2.jpg" alt="Voorbeeldwebsite van servieslijn Studio Noord" loading="lazy"></div>
           <h3>Website · servieslijn</h3>
-          <p>Warm beige en koper, met de productfilm erin.</p>
-        </a>
+          <p>Warm beige en koper, met de productfilm erin. <span class="blader">Bekijk de site in 5 beelden</span></p>
+        </button>
       </div>
     </div>
   </section>
@@ -195,6 +195,14 @@
   </section>
 </main>
 
+<div class="kijkvenster" id="kijkvenster" hidden>
+  <div class="kijkvak" role="dialog" aria-modal="true" aria-label="Voorbeeldwebsite">
+    <div class="kijkkop"><span id="kijktitel"></span><span id="kijkteller"></span><button type="button" id="kijksluit" aria-label="Sluiten">&times;</button></div>
+    <div class="venster los"><div class="balk"><i></i><i></i><i></i></div><img id="kijkbeeld" alt=""></div>
+    <div class="kijkknoppen"><button type="button" id="kijkvorige">&larr; Vorige</button><button type="button" id="kijkvolgende">Volgende &rarr;</button></div>
+  </div>
+</div>
+
 <a class="omhoog" href="#" aria-label="Naar boven">&uarr;</a>
 
 <footer>
@@ -208,6 +216,21 @@
 <script>
   var knop=document.querySelector('.omhoog');
   window.addEventListener('scroll', function(){ knop.classList.toggle('zichtbaar', window.scrollY>600); });
+
+  // kijkvenster: bladeren door vijf schermbeelden van een voorbeeldsite, zonder de pagina te verlaten
+  var kv=document.getElementById('kijkvenster'), kb=document.getElementById('kijkbeeld'), naam='', nr=1, AANTAL=5;
+  function toon(){ kb.src='img/vb-'+naam+'-'+nr+'.jpg'; document.getElementById('kijkteller').textContent=nr+' van '+AANTAL; }
+  function sluit(){ kv.hidden=true; document.body.style.overflow=''; }
+  function stap(d){ nr=(nr-1+d+AANTAL)%AANTAL+1; toon(); }
+  document.querySelectorAll('[data-voorbeeld]').forEach(function(b){
+    b.addEventListener('click', function(){ naam=b.dataset.voorbeeld; nr=1; document.getElementById('kijktitel').textContent=b.dataset.titel; kb.alt=b.dataset.titel; toon(); kv.hidden=false; document.body.style.overflow='hidden'; });
+  });
+  document.getElementById('kijksluit').addEventListener('click', sluit);
+  document.getElementById('kijkvorige').addEventListener('click', function(){ stap(-1); });
+  document.getElementById('kijkvolgende').addEventListener('click', function(){ stap(1); });
+  kb.addEventListener('click', function(){ stap(1); });
+  kv.addEventListener('click', function(e){ if(e.target===kv) sluit(); });
+  document.addEventListener('keydown', function(e){ if(kv.hidden) return; if(e.key==='Escape') sluit(); if(e.key==='ArrowRight') stap(1); if(e.key==='ArrowLeft') stap(-1); });
 </script>
 </body>
 </html>
