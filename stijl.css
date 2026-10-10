@@ -77,6 +77,8 @@ thead th:nth-child(2) { background:var(--antraciet); color:var(--limoen); border
 tbody td:nth-child(2) { background:#F7FFD6; font-weight:700; }
 tbody tr:last-child td:nth-child(2) { border-radius:0 0 6px 6px; }
 td:first-child { color:var(--tekst2); font-weight:500; }
+.tabelvak { overflow-x:auto; }
+.tabelvak table { min-width:560px; }
 .bron { margin-top:14px; font-size:13px; color:var(--tekst2); }
 
 /* werkwijze */
