@@ -38,8 +38,8 @@
   .topbar { position:sticky; top:0; z-index:50; background:var(--antraciet); border-bottom:1px solid #33333C; }
   .bar { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:14px 24px; max-width:1100px; margin:0 auto; }
   .bar img { height:72px; display:block; }
-  nav { display:flex; gap:28px; }
-  nav a { color:var(--wit); text-decoration:none; font-weight:700; font-size:15.5px; text-shadow:0 1px 3px rgba(0,0,0,0.6); }
+  nav { display:flex; gap:22px; }
+  nav a { color:var(--wit); text-decoration:none; font-weight:700; font-size:15px; white-space:nowrap; text-shadow:0 1px 3px rgba(0,0,0,0.6); }
   nav a:hover { color:var(--wit); }
   .hero { max-width:1100px; margin:0 auto; padding:72px 24px 88px; }
   .hero h1 { font-weight:800; font-size:clamp(34px, 6vw, 62px); line-height:1.08; letter-spacing:-0.6px; max-width:16ch; }
@@ -75,6 +75,11 @@
   .kaart .vb a { color:var(--antraciet); }
   .noot { margin-top:22px; font-size:14px; color:var(--tekst2); }
   body::after { content:""; position:fixed; top:0; left:0; right:0; height:150px; pointer-events:none; z-index:60; background:linear-gradient(to bottom, rgba(200,255,0,0.30) 0%, rgba(200,255,0,0.12) 40%, rgba(200,255,0,0) 100%); }
+
+  /* websites */
+  .websites { background:var(--antraciet); color:var(--wit); }
+  .websites .intro, .websites .noot { color:#D6D6DC; }
+  .websites .kaart { color:var(--antraciet); }
 
   /* mogelijkheden */
   .opties { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:40px; }
@@ -141,7 +146,7 @@
     th, td { padding:12px 8px; }
   }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Overtake Media", "url": "https://overtakemedia.nl/", "email": "info@overtakemedia.nl", "telephone": "+31617736558", "logo": "https://overtakemedia.nl/img/icoon.png", "image": "https://overtakemedia.nl/img/lindehof.jpg", "description": "Overtake Media maakt korte promotiefilms voor het mkb: bedrijfsfilms, productfilms, ketenfilms en campagnefilms voor social media. Eerste versie binnen vijf werkdagen, vaste prijs vooraf, zonder draaidag.", "areaServed": {"@type": "Country", "name": "Nederland"}, "priceRange": "€149 - €895", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Promotiefilms", "itemListElement": [{"@type": "Offer", "name": "Bedrijfsfilm", "price": "895", "priceCurrency": "EUR", "description": "Film van één minuut over je bedrijf, liggend en staand."}, {"@type": "Offer", "name": "Productfilms", "price": "49", "priceCurrency": "EUR", "description": "Per product een film van 20 tot 30 seconden, na € 995 opzet, vanaf 20 producten."}, {"@type": "Offer", "name": "Ketenfilm", "price": "349", "priceCurrency": "EUR", "description": "Per vestiging een eigen versie van de bedrijfsfilm, na een basisfilm van € 895."}, {"@type": "Offer", "name": "Campagnefilm", "price": "149", "priceCurrency": "EUR", "description": "Korte film van 15 tot 30 seconden voor social media, na € 295 opzet met de eerste film."}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Overtake Media", "url": "https://overtakemedia.nl/", "email": "info@overtakemedia.nl", "telephone": "+31617736558", "logo": "https://overtakemedia.nl/img/icoon.png", "image": "https://overtakemedia.nl/img/lindehof.jpg", "description": "Overtake Media maakt korte promotiefilms voor het mkb: bedrijfsfilms, productfilms, ketenfilms en campagnefilms voor social media. Eerste versie binnen vijf werkdagen, vaste prijs vooraf, zonder draaidag.", "areaServed": {"@type": "Country", "name": "Nederland"}, "priceRange": "€149 - €895", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Promotiefilms", "itemListElement": [{"@type": "Offer", "name": "Bedrijfsfilm", "price": "895", "priceCurrency": "EUR", "description": "Film van één minuut over je bedrijf, liggend en staand."}, {"@type": "Offer", "name": "Productfilms", "price": "49", "priceCurrency": "EUR", "description": "Per product een film van 20 tot 30 seconden, na € 995 opzet, vanaf 20 producten."}, {"@type": "Offer", "name": "Ketenfilm", "price": "349", "priceCurrency": "EUR", "description": "Per vestiging een eigen versie van de bedrijfsfilm, na een basisfilm van € 895."}, {"@type": "Offer", "name": "Campagnefilm", "price": "149", "priceCurrency": "EUR", "description": "Korte film van 15 tot 30 seconden voor social media, na € 295 opzet met de eerste film."}, {"@type": "Offer", "name": "Website in jouw huisstijl", "price": "495", "priceCurrency": "EUR", "description": "Website van één pagina in de huisstijl van de klant, daarna € 29 per maand voor hosting, onderhoud en kleine tekstwijzigingen. Maatwerk en webshops in overleg."}]}}</script>
 </head>
 <body>
 
@@ -151,6 +156,7 @@
       <a href="#aanbod">Wat we maken</a>
       <a href="#voorbeelden">Voorbeelden</a>
       <a href="#mogelijkheden">Mogelijkheden</a>
+      <a href="#websites">Websites</a>
       <a href="#werkwijze">Zo werkt het</a>
       <a href="#vragen">Vragen</a>
       <a href="#contact">Contact</a>
@@ -287,6 +293,32 @@
     </div>
   </section>
 
+  <section id="websites" class="websites">
+    <div class="wrap">
+      <h2>Ook je website</h2>
+      <p class="intro">Een film werkt het best op een site die erbij past. Daarom bouwen we ook websites: in jouw huisstijl, met een vaste prijs vooraf.</p>
+      <div class="kaarten">
+
+        <div class="kaart">
+          <h3>Website in jouw huisstijl</h3>
+          <p class="wat">Eén heldere pagina waarop alles staat: wat je doet, je werk in foto's, je werkgebied en hoe klanten je bereiken. In jouw kleuren en lettertype, en goed leesbaar op de telefoon. Heb je een film van ons, dan staat die erin.</p>
+          <div class="prijs">€ 495 eenmalig, daarna € 29 per maand<small>voor hosting, onderhoud en kleine tekstwijzigingen</small></div>
+          <div class="proef"><strong>Film en website samen?</strong> Dan sluiten ze op elkaar aan: hetzelfde verhaal in dezelfde stijl.</div>
+          <div class="vb">Voorbeeld: volgt</div>
+        </div>
+
+        <div class="kaart">
+          <h3>Maatwerk in overleg</h3>
+          <p class="wat">Meer pagina's, een webshop, een offerteformulier, een tweede taal of iets heel anders: het is allemaal bespreekbaar. Vertel wat je voor ogen hebt, dan kijken we samen wat past.</p>
+          <div class="prijs">Prijs in overleg<small>altijd vooraf bekend, voordat we beginnen</small></div>
+          <div class="vb"><a href="mailto:info@overtakemedia.nl?subject=Vraag%20over%20een%20website">Stuur een mail met wat je zoekt</a></div>
+        </div>
+
+      </div>
+      <p class="noot">Alle prijzen exclusief btw.</p>
+    </div>
+  </section>
+
   <section id="werkwijze">
     <div class="wrap">
       <h2>Zo werkt het</h2>
@@ -339,6 +371,10 @@
           <p>Na je aanvraag per mail krijg je binnen 1 werkdag het intakeformulier. Na ontvangst van je antwoorden heb je binnen 2 werkdagen het scenario, en na je akkoord en betaling binnen 3 werkdagen de eerste versie. Na jouw opmerkingen is de definitieve film binnen 3 werkdagen klaar. Bij spoed denken we mee.</p>
         </details>
         <details>
+          <summary>Maken jullie ook websites?</summary>
+          <p>Ja. Een website van één pagina in jouw huisstijl kost € 495 eenmalig, daarna € 29 per maand voor hosting, onderhoud en kleine tekstwijzigingen. Wil je meer, zoals extra pagina's of een webshop, dan bespreken we wat past en hoor je de prijs vooraf. Alle prijzen zijn exclusief btw.</p>
+        </details>
+        <details>
           <summary>Wat moet ik aanleveren?</summary>
           <p>Weinig, en wij sturen je erin. Je krijgt van ons een intakeformulier met een paar korte vragen: wat je doet, voor wie, welke film je wilt en wat je wilt vertellen. Daarop staat ook precies welk materiaal we nodig hebben en hoe je het maakt: je logo, foto's en korte filmpjes van je bedrijf, liggend, bij daglicht, 5 tot 15 seconden. Twijfel je ergens over, dan denken we mee.</p>
         </details>
@@ -349,7 +385,7 @@
   <section id="contact" class="contact">
     <div class="wrap">
       <h2>Contact</h2>
-      <p class="intro">We maken promotiefilms voor ondernemers in heel Nederland, zonder draaidag op locatie. Benieuwd wat een film voor jouw bedrijf kan doen? Stuur een mail of bel Daniella, dan denken we met je mee. Op een mail krijg je binnen één werkdag antwoord.</p>
+      <p class="intro">We maken promotiefilms en websites voor ondernemers in heel Nederland, zonder draaidag op locatie. Benieuwd wat een film of een website voor jouw bedrijf kan doen? Stuur een mail of bel Daniella, dan denken we met je mee. Op een mail krijg je binnen één werkdag antwoord.</p>
       <div class="contact-regels">
         <div><small>Mail</small><a href="mailto:info@overtakemedia.nl?subject=Vraag%20over%20een%20promotiefilm">info@overtakemedia.nl</a></div>
         <div><small>Bel of app</small><a href="tel:+31617736558">Daniella, 06 17 73 65 58</a></div>
@@ -365,7 +401,7 @@
   <div class="wrap">
     <span>© 2026 Overtake Media</span>
     <span>KVK-nummer en btw-id volgen na inschrijving · <a href="privacy.html">Privacy</a></span>
-    <span>Promotiefilms voor ondernemers in heel Nederland · Alle prijzen exclusief btw</span>
+    <span>Promotiefilms en websites voor ondernemers in heel Nederland · Alle prijzen exclusief btw</span>
   </div>
 </footer>
 
