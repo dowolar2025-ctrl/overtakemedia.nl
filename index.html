@@ -38,7 +38,7 @@
   .topbar { position:sticky; top:0; z-index:50; background:var(--antraciet); border-bottom:1px solid #33333C; }
   .bar { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:14px 24px; max-width:1100px; margin:0 auto; }
   .bar img { height:72px; display:block; }
-  nav { display:flex; gap:22px; }
+  nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:6px 22px; }
   nav a { color:var(--wit); text-decoration:none; font-weight:700; font-size:15px; white-space:nowrap; text-shadow:0 1px 3px rgba(0,0,0,0.6); }
   nav a:hover { color:var(--wit); }
   .hero { max-width:1100px; margin:0 auto; padding:72px 24px 88px; }
@@ -134,6 +134,8 @@
     .films, .kaarten { grid-template-columns:1fr; }
     .opties { grid-template-columns:1fr 1fr; }
     .stappen { grid-template-columns:1fr 1fr 1fr; }
+  }
+  @media (max-width:700px) {
     nav { display:none; }
   }
   @media (max-width:560px) {
