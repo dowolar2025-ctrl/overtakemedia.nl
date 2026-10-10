@@ -171,7 +171,7 @@ nav a.ander:hover { color:var(--antraciet); filter:brightness(0.95); }
 .kijkkop #kijkteller { font-weight:500; font-size:15px; color:#BDBDC6; margin-left:auto; }
 .kijkkop button { background:none; border:0; color:var(--wit); font-size:34px; line-height:1; cursor:pointer; padding:0 4px; }
 .kijkvak .venster.los { aspect-ratio:auto; }
-.kijkvak .venster.los img { cursor:pointer; flex:none; display:block; width:auto; height:auto; max-width:100%; max-height:calc(78vh - 34px); background:#fff; }
+.kijkvak .venster.los img { cursor:pointer; flex:none; display:block; width:auto; height:auto; max-width:100%; max-height:calc(100vh - 210px); background:#fff; }
 .kijkknoppen { display:flex; justify-content:space-between; gap:12px; margin-top:14px; }
 .kijkknoppen button { background:var(--limoen); color:var(--antraciet); border:0; border-radius:4px; font:inherit; font-weight:800; padding:12px 22px; cursor:pointer; }
 .kijkknoppen button:hover { filter:brightness(0.95); }
