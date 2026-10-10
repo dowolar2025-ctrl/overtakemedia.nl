@@ -156,6 +156,9 @@ nav a.ander:hover { color:var(--antraciet); filter:brightness(0.95); }
 .venster { position:absolute; inset:9% 12%; background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 14px 40px rgba(0,0,0,0.45); display:flex; flex-direction:column; }
 .venster .balk { height:11%; background:#E3E3E8; display:flex; align-items:center; gap:5px; padding:0 10px; }
 .venster .balk i { width:8px; height:8px; border-radius:50%; background:#B4B4BE; display:block; }
+.venster img { display:block; width:100%; flex:1; min-height:0; object-fit:cover; object-position:top; }
+.venster.los { position:static; inset:auto; max-width:860px; margin-top:36px; aspect-ratio:16/10.6; box-shadow:0 0 0 1px rgba(200,255,0,0.35), 0 0 22px 3px rgba(200,255,0,0.20), 0 18px 44px rgba(30,30,36,0.18); }
+.venster.los .balk { height:34px; flex:none; }
 .venster .kop { flex:1.25; background:linear-gradient(135deg, #2A2A32 0%, #1E1E24 100%); display:flex; flex-direction:column; justify-content:center; padding:0 9%; gap:7%; }
 .venster .kop b { display:block; height:13%; width:62%; background:#fff; border-radius:3px; }
 .venster .kop u { display:block; height:8%; width:40%; background:var(--limoen); border-radius:3px; }
