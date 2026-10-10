@@ -3,383 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Overtake Media · Bedrijfsfilm en promotiefilm laten maken voor het mkb</title>
-<meta name="description" content="Bedrijfsfilm of promotiefilm laten maken voor het mkb. Korte, betaalbare films voor ondernemers, winkels, webshops en ketens. Binnen vijf werkdagen, vaste prijs vooraf, zonder draaidag.">
-<meta property="og:title" content="Overtake Media · Promotiefilms voor het mkb">
-<meta property="og:description" content="Korte promotiefilms voor ondernemers, winkels, webshops en ketens. Eerste versie binnen 5 werkdagen, vaste prijs vooraf, zonder draaidag.">
+<title>Overtake Media · Promotiefilms en websites voor het mkb</title>
+<meta name="description" content="Overtake Media maakt promotiefilms en websites voor het mkb. Bedrijfsfilm of promotiefilm laten maken, of een website in jouw huisstijl: vaste prijs vooraf, zonder gedoe.">
+<meta property="og:title" content="Overtake Media · Promotiefilms en websites voor het mkb">
+<meta property="og:description" content="Promotiefilms en websites voor ondernemers, winkels, webshops en ketens. In jouw huisstijl, met een vaste prijs vooraf.">
 <meta property="og:image" content="https://overtakemedia.nl/img/lindehof.jpg">
 <meta property="og:url" content="https://overtakemedia.nl/">
-<meta name="google-site-verification" content="iY5Mu1yxWHPWTAywFuKohquAYSVC9sbn_sOde4Xjv1Y" />
 <link rel="canonical" href="https://overtakemedia.nl/">
+<meta name="google-site-verification" content="iY5Mu1yxWHPWTAywFuKohquAYSVC9sbn_sOde4Xjv1Y" />
 <link rel="icon" type="image/png" href="img/icoon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
-<style>
-  :root { --antraciet:#1E1E24; --limoen:#C8FF00; --wit:#FFFFFF; --grijs:#F3F3F5; --lijn:#E3E3E8; --tekst2:#5A5A66; --donker2:#2A2A32; }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  html { scroll-behavior:smooth; }
-  body { font-family:Montserrat, Arial, sans-serif; color:var(--antraciet); background:var(--wit); line-height:1.6; font-size:17px; }
-  a { color:inherit; }
-  .wrap { max-width:1100px; margin:0 auto; padding:0 24px; }
-  h2 { font-weight:800; font-size:clamp(26px, 3.6vw, 38px); line-height:1.15; margin-bottom:14px; letter-spacing:-0.3px; }
-  h2::before { content:""; display:block; width:44px; height:6px; background:var(--limoen); margin-bottom:18px; }
-  .intro { color:var(--tekst2); max-width:60ch; font-size:18px; }
-  section { padding:72px 0; scroll-margin-top:106px; }
-  .knop { display:inline-block; background:var(--limoen); color:var(--antraciet); font-weight:800; text-decoration:none; padding:16px 28px; border-radius:4px; }
-  .knop:hover { filter:brightness(0.95); }
-  .knop-licht { display:inline-block; color:var(--wit); font-weight:700; text-decoration:none; padding:16px 28px; border:2px solid rgba(255,255,255,0.35); border-radius:4px; }
-  .knop-licht:hover { border-color:var(--limoen); }
-
-  /* kop en hero */
-  header { background:var(--antraciet); color:var(--wit); position:relative; overflow:hidden; }
-  header::before { content:""; position:absolute; right:-220px; top:-180px; width:720px; height:720px; border-radius:50%; background:radial-gradient(circle, rgba(200,255,0,0.22) 0%, rgba(200,255,0,0.08) 35%, rgba(200,255,0,0) 68%); pointer-events:none; }
-  .hero, .feiten { position:relative; }
-  .topbar { position:sticky; top:0; z-index:50; background:var(--antraciet); border-bottom:1px solid #33333C; }
-  .bar { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:14px 24px; max-width:1100px; margin:0 auto; }
-  .bar img { height:72px; display:block; }
-  nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:6px 22px; }
-  nav a { color:var(--wit); text-decoration:none; font-weight:700; font-size:15px; white-space:nowrap; text-shadow:0 1px 3px rgba(0,0,0,0.6); }
-  nav a:hover { color:var(--wit); }
-  .hero { max-width:1100px; margin:0 auto; padding:72px 24px 88px; }
-  .hero h1 { font-weight:800; font-size:clamp(34px, 6vw, 62px); line-height:1.08; letter-spacing:-0.6px; max-width:16ch; }
-  .hero h1 span { display:inline-block; border-bottom:0.16em solid var(--limoen); padding-bottom:0.14em; }
-  .hero p { margin-top:22px; font-size:clamp(17px, 2vw, 20px); color:#D6D6DC; max-width:48ch; }
-  .hero .knoppen { margin-top:32px; display:flex; gap:14px; flex-wrap:wrap; }
-  .feiten { background:var(--donker2); border-top:1px solid #33333C; }
-  .feiten .wrap { display:grid; grid-template-columns:repeat(3, 1fr); gap:0; }
-  .feit { padding:22px 24px; border-left:1px solid #3A3A44; color:var(--wit); }
-  .feit:first-child { border-left:0; padding-left:0; }
-  .feit strong { display:block; font-size:22px; font-weight:800; color:var(--limoen); }
-  .feit span { font-size:14px; color:#BDBDC6; }
-
-  /* voorbeelden */
-  .films { display:grid; grid-template-columns:16fr 9fr; gap:28px; margin-top:40px; align-items:start; }
-  .film video { width:100%; display:block; border-radius:6px; background:var(--antraciet); aspect-ratio:16/9; object-fit:cover; box-shadow:0 0 0 1px rgba(200,255,0,0.35), 0 0 14px 2px rgba(200,255,0,0.22); }
-  .film.vierkant video { aspect-ratio:1/1; }
-  .film h3 { font-weight:800; font-size:18px; margin-top:14px; }
-  .film p { color:var(--tekst2); font-size:15px; }
-  .volgt { margin-top:28px; color:var(--tekst2); font-size:15px; }
-
-  /* aanbod */
-  .aanbod-bg { background:var(--grijs); }
-  .kaarten { display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; margin-top:40px; }
-  .kaart { background:var(--wit); padding:32px; border-radius:8px; border-top:6px solid var(--limoen); display:flex; flex-direction:column; }
-  .kaart h3 { font-weight:800; font-size:22px; margin-bottom:10px; }
-  .kaart p.wat { color:var(--tekst2); font-size:15.5px; flex:1; }
-  .kaart .prijs { margin-top:20px; font-weight:800; font-size:19px; line-height:1.35; }
-  .kaart .prijs small { display:block; font-weight:500; font-size:14px; color:var(--tekst2); margin-top:4px; }
-  .kaart .proef { margin-top:14px; font-size:14.5px; color:var(--antraciet); background:var(--grijs); padding:12px 14px; border-radius:4px; }
-  .kaart .proef strong { font-weight:800; }
-  .kaart .vb { margin-top:12px; font-size:13.5px; color:var(--tekst2); }
-  .kaart .vb a { color:var(--antraciet); }
-  .noot { margin-top:22px; font-size:14px; color:var(--tekst2); }
-  body::after { content:""; position:fixed; top:0; left:0; right:0; height:150px; pointer-events:none; z-index:60; background:linear-gradient(to bottom, rgba(200,255,0,0.30) 0%, rgba(200,255,0,0.12) 40%, rgba(200,255,0,0) 100%); }
-
-  /* websites */
-  .websites { background:var(--antraciet); color:var(--wit); }
-  .websites .intro, .websites .noot { color:#D6D6DC; }
-  .websites .kaart { color:var(--antraciet); }
-
-  /* mogelijkheden */
-  .opties { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:40px; }
-  .optie { padding:22px 24px; border:1px solid var(--lijn); border-radius:8px; border-left:5px solid var(--limoen); }
-  .optie h3 { font-weight:800; font-size:16.5px; margin-bottom:4px; }
-  .optie p { color:var(--tekst2); font-size:14.5px; }
-
-  /* vergelijking */
-  table { width:100%; border-collapse:collapse; margin-top:36px; font-size:16px; }
-  th, td { text-align:left; padding:16px 14px; border-bottom:1px solid var(--lijn); vertical-align:top; }
-  th { font-weight:800; font-size:15px; }
-  thead th:nth-child(2) { background:var(--antraciet); color:var(--limoen); border-radius:6px 6px 0 0; }
-  tbody td:nth-child(2) { background:#F7FFD6; font-weight:700; }
-  tbody tr:last-child td:nth-child(2) { border-radius:0 0 6px 6px; }
-  td:first-child { color:var(--tekst2); font-weight:500; }
-  .bron { margin-top:14px; font-size:13px; color:var(--tekst2); }
-
-  /* werkwijze */
-  .stappen { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:40px; counter-reset:stap; }
-  .stap { background:var(--wit); padding:24px; border-radius:8px; border:1px solid var(--lijn); }
-  .stap::before { counter-increment:stap; content:counter(stap); display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; background:var(--antraciet); color:var(--limoen); font-weight:800; border-radius:50%; margin-bottom:16px; }
-  .stap h3 { font-weight:800; font-size:18px; margin-bottom:6px; }
-  .stap p { color:var(--tekst2); font-size:14.5px; }
-
-
-  /* vragen */
-  .vragen { margin-top:36px; border-top:1px solid var(--lijn); }
-  details { border-bottom:1px solid var(--lijn); }
-  summary { cursor:pointer; list-style:none; padding:20px 0; font-weight:700; font-size:17px; display:flex; justify-content:space-between; gap:16px; }
-  summary::-webkit-details-marker { display:none; }
-  summary::after { content:"+"; color:var(--tekst2); font-weight:400; font-size:24px; line-height:1; }
-  details[open] summary::after { content:"−"; }
-  details p { color:var(--tekst2); padding:0 0 20px; max-width:70ch; }
-
-  /* contact */
-  .contact { background:var(--antraciet); color:var(--wit); position:relative; overflow:hidden; }
-  .contact .wrap { position:relative; }
-  .contact .intro { color:#D6D6DC; }
-  .contact-regels { margin-top:32px; display:flex; flex-wrap:wrap; gap:18px 56px; font-size:19px; }
-  .contact-regels a { color:var(--wit); text-decoration:none; font-weight:500; border-bottom:2px solid var(--limoen); }
-  .contact-regels small { display:block; font-size:12.5px; color:#9A9AA6; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:4px; }
-  footer { background:var(--antraciet); color:#9A9AA6; font-size:13px; border-top:1px solid #33333C; }
-  footer .wrap { padding:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px 24px; }
-
-  .omhoog { position:fixed; right:24px; bottom:24px; width:64px; height:64px; border-radius:50%; background:var(--limoen); color:var(--antraciet); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:30px; text-decoration:none; box-shadow:0 6px 20px rgba(0,0,0,0.25); opacity:0; pointer-events:none; transition:opacity .25s; z-index:40; }
-  .omhoog.zichtbaar { opacity:1; pointer-events:auto; }
-  @media (max-width:860px) {
-    .hero { padding:44px 16px 56px; }
-    .feiten .wrap { grid-template-columns:1fr; }
-    .feit { border-left:0; padding:14px 0; border-top:1px solid #3A3A44; }
-    .feit:first-child { border-top:0; }
-    .films, .kaarten { grid-template-columns:1fr; }
-    .opties { grid-template-columns:1fr 1fr; }
-    .stappen { grid-template-columns:1fr 1fr 1fr; }
-  }
-  @media (max-width:700px) {
-    nav { display:none; }
-  }
-  @media (max-width:560px) {
-    .wrap { padding:0 16px; }
-    .bar { padding:16px; }
-    .bar img { height:52px; }
-    section { padding:56px 0; }
-    .stappen, .opties { grid-template-columns:1fr; }
-    table { font-size:14px; }
-    th, td { padding:12px 8px; }
-  }
-</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Overtake Media", "url": "https://overtakemedia.nl/", "email": "info@overtakemedia.nl", "telephone": "+31617736558", "logo": "https://overtakemedia.nl/img/icoon.png", "image": "https://overtakemedia.nl/img/lindehof.jpg", "description": "Overtake Media maakt korte promotiefilms voor het mkb: bedrijfsfilms, productfilms, ketenfilms en campagnefilms voor social media. Eerste versie binnen vijf werkdagen, vaste prijs vooraf, zonder draaidag.", "areaServed": {"@type": "Country", "name": "Nederland"}, "priceRange": "€149 - €895", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Promotiefilms", "itemListElement": [{"@type": "Offer", "name": "Bedrijfsfilm", "price": "895", "priceCurrency": "EUR", "description": "Film van één minuut over je bedrijf, liggend en staand."}, {"@type": "Offer", "name": "Productfilms", "price": "49", "priceCurrency": "EUR", "description": "Per product een film van 20 tot 30 seconden, na € 995 opzet, vanaf 20 producten."}, {"@type": "Offer", "name": "Ketenfilm", "price": "349", "priceCurrency": "EUR", "description": "Per vestiging een eigen versie van de bedrijfsfilm, na een basisfilm van € 895."}, {"@type": "Offer", "name": "Campagnefilm", "price": "149", "priceCurrency": "EUR", "description": "Korte film van 15 tot 30 seconden voor social media, na € 295 opzet met de eerste film."}, {"@type": "Offer", "name": "Website in jouw huisstijl", "price": "495", "priceCurrency": "EUR", "description": "Website van één pagina in de huisstijl van de klant, daarna € 29 per maand voor hosting, onderhoud en kleine tekstwijzigingen. Maatwerk en webshops in overleg."}]}}</script>
+<link rel="stylesheet" href="stijl.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Overtake Media", "url": "https://overtakemedia.nl/", "email": "info@overtakemedia.nl", "telephone": "+31617736558", "logo": "https://overtakemedia.nl/img/icoon.png", "image": "https://overtakemedia.nl/img/lindehof.jpg", "description": "Overtake Media maakt promotiefilms en websites voor het mkb: bedrijfsfilms, productfilms, ketenfilms en campagnefilms, en websites in de huisstijl van de klant. Vaste prijs vooraf.", "areaServed": {"@type": "Country", "name": "Nederland"}, "priceRange": "€149 - €895"}</script>
 </head>
 <body>
 
 <div class="topbar"><div class="bar">
-    <a href="#"><img src="img/logo-donker.svg" alt="Overtake Media"></a>
+    <a href="/"><img src="img/logo-donker.svg" alt="Overtake Media"></a>
     <nav>
-      <a href="#aanbod">Wat we maken</a>
-      <a href="#voorbeelden">Voorbeelden</a>
-      <a href="#mogelijkheden">Mogelijkheden</a>
-      <a href="#websites">Websites</a>
-      <a href="#werkwijze">Zo werkt het</a>
-      <a href="#vragen">Vragen</a>
+      <a href="films.html">Films</a>
+      <a href="websites.html">Websites</a>
+      <a href="#waarom">Waarom wij</a>
       <a href="#contact">Contact</a>
     </nav>
 </div></div>
 <header>
-  <div class="hero">
-    <div>
-      <h1>Je bedrijf in beeld. <span>Binnen vijf werkdagen.</span></h1>
-      <p>Bedrijfsfilm of promotiefilm laten maken? Overtake Media maakt korte, betaalbare promotiefilms voor het mkb: voor ondernemers, winkels, webshops en ketens. Voor je website, social media en presentaties. Vaste prijs vooraf, zonder draaidag.</p>
-      <div class="knoppen">
-        <a class="knop" href="#contact">Vraag een film aan</a>
-        <a class="knop-licht" href="#voorbeelden">Bekijk voorbeelden</a>
-      </div>
-    </div>
+  <div class="voorpagina-hero">
+    <h1>Je bedrijf <span>in beeld en online.</span></h1>
+    <p>Overtake Media maakt promotiefilms en websites voor het mkb: voor ondernemers, winkels, webshops en ketens. In jouw huisstijl, met een vaste prijs vooraf.</p>
   </div>
-  <div class="feiten">
-    <div class="wrap">
-      <div class="feit"><strong>5 werkdagen</strong><span>Je film klaar om te bekijken</span></div>
-      <div class="feit"><strong>Vanaf € 295</strong><span>Vaste prijs, vooraf bekend</span></div>
-      <div class="feit"><strong>Geen draaidag</strong><span>Jouw foto's en filmpjes zijn genoeg</span></div>
+  <div class="deurvak">
+    <div class="deuren">
+      <a class="deur" href="films.html">
+        <div class="beeld" style="background-image:url('img/lindehof.jpg')"></div>
+        <div class="tekst">
+          <h2>Films</h2>
+          <p>Bedrijfsfilm of promotiefilm laten maken? Korte films voor je website, social media en presentaties. Eerste versie binnen vijf werkdagen, zonder draaidag.</p>
+          <div class="vanaf">Vanaf € 295</div>
+          <span class="knop">Bekijk de films</span>
+        </div>
+      </a>
+      <a class="deur" href="websites.html">
+        <div class="beeld"><div class="venster"><div class="balk"><i></i><i></i><i></i></div><div class="kop"><b></b><u></u></div><div class="rij"><s></s><s></s><s></s></div></div></div>
+        <div class="tekst">
+          <h2>Websites</h2>
+          <p>Een website in jouw huisstijl, goed leesbaar op de telefoon en met je film erin. Meer pagina's of een webshop kan in overleg.</p>
+          <div class="vanaf">€ 495, daarna € 29 per maand</div>
+          <span class="knop">Bekijk de websites</span>
+        </div>
+      </a>
     </div>
   </div>
 </header>
 
 <main>
-
-  <section id="aanbod" >
+  <section id="waarom">
     <div class="wrap">
-      <h2>Wat we maken</h2>
-      <p class="intro">Vier soorten films, elk met een vaste prijs vooraf.</p>
-      <p class="intro"><strong>Iets anders in gedachten?</strong> Een film voor een beurs, een opening, een jubileum of een vacature: geen klus is ons te gek. Vertel wat je wilt, dan maken we er een vaste prijs voor.</p>
-      <div class="kaarten">
-
-        <div class="kaart">
-          <h3>Bedrijfsfilm</h3>
-          <p class="wat">Laat in één minuut zien wie je bent en wat je maakt. Voor je website, social media en presentaties.</p>
-          <div class="prijs">€ 895</div>
-          <div class="proef"><strong>Introductieprijs:</strong> de eerste 10 klanten betalen € 595.</div>
-          <div class="vb">Voorbeeld: <a href="#film-hovenier" data-film="film-hovenier">bekijk de bedrijfsfilm van de hovenier</a></div>
-        </div>
-
-        <div class="kaart">
-          <h3>Productfilms</h3>
-          <p class="wat">Voor iedereen die producten verkoopt: webshops, groothandels, fabrikanten, winkels, kwekers, makers. Elk product een eigen film van 20 tot 30 seconden, allemaal in jouw huisstijl. Bewegend beeld inbegrepen.</p>
-          <div class="prijs">€ 995 opzet, daarna € 49 per product<small>vanaf 20 producten</small></div>
-          <div class="proef"><strong>Eerst proberen?</strong> 3 productfilms voor € 195.</div>
-          <div class="vb">Voorbeeld: <a href="#film-servieslijn" data-film="film-servieslijn">bekijk de productfilm van de servieslijn</a></div>
-        </div>
-
-        <div class="kaart">
-          <h3>Ketenfilm</h3>
-          <p class="wat">Voor ketens en franchise: één bedrijfsfilm waarin het hele bedrijf zich herkent, en voor elke vestiging een eigen versie. Alle films hebben dezelfde stijl en opbouw, maar elke vestiging levert eigen beelden en eigen verhaal aan: het eigen team, wat hen bijzonder maakt en de sfeer die daar hangt. Zo krijgt elke vestiging haar eigen film.</p>
-          <div class="prijs">€ 895 voor de basisfilm, daarna € 349 per vestiging</div>
-          <div class="proef"><strong>Eerst proberen?</strong> Eén vestiging als proef voor € 595. Gaat de keten door, dan is de proef meteen de basisfilm.</div>
-          <div class="vb">Voorbeeld: volgt</div>
-        </div>
-
-        <div class="kaart">
-          <h3>Campagnefilms</h3>
-          <p class="wat">Korte films van 15 tot 30 seconden voor social media, over één onderwerp van het moment: een actie, een vacature, een nieuw product, een seizoensboodschap.</p>
-          <div class="prijs">€ 295 voor de opzet met je eerste film, daarna € 149 per film</div>
-          <div class="proef"><strong>Eerst proberen?</strong> Je eerste campagnefilm voor € 195, inclusief opzet. Ga je door, dan is de proef je basis.</div>
-          <div class="vb">Voorbeeld: volgt</div>
-        </div>
-
-      </div>
-
-      <p class="noot">Alle prijzen exclusief btw.</p>
-    </div>
-  </section>
-
-  <section id="voorbeelden" class="aanbod-bg">
-    <div class="wrap">
-      <h2>Voorbeelden</h2>
-      <p class="intro">Twee films die laten zien wat we maken: een bedrijfsfilm voor een hovenier en een productfilm voor een servieslijn.</p>
-      <div class="films">
-        <div class="film" id="film-hovenier">
-          <video src="films/lindehof.mp4" poster="img/lindehof.jpg" controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
-          <h3>Bedrijfsfilm · hovenier</h3>
-          <p>Eén minuut, liggend formaat. Voor website en presentaties.</p>
-        </div>
-        <div class="film vierkant" id="film-servieslijn">
-          <video src="films/collectie-noord.mp4" poster="img/collectie-noord.jpg" controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
-          <h3>Productfilm · servieslijn</h3>
-          <p>Vierkant formaat, voor webshop en social media.</p>
-        </div>
-      </div>
-      <p class="volgt">Voorbeelden van een ketenfilm en een campagnefilm volgen binnenkort.</p>
-    </div>
-  </section>
-
-  <section id="mogelijkheden">
-    <div class="wrap">
-      <h2>Wat er allemaal kan</h2>
-      <p class="intro">Elke film wordt op maat gemaakt. Dit zijn de mogelijkheden; wat erin komt, bepalen we samen in het scenario.</p>
-      <div class="opties">
-        <div class="optie"><h3>Vlucht over en in je pand</h3><p>Vanuit de lucht naar jouw voordeur en zo naar binnen, zonder drone.</p></div>
-        <div class="optie"><h3>Kaart van je werkgebied</h3><p>Laat zien waar je werkt, of waar al je vestigingen zitten.</p></div>
-        <div class="optie"><h3>Je eigen stem</h3><p>Spreek een paar zinnen in op je telefoon; wij zetten ze in de film.</p></div>
-        <div class="optie"><h3>Jijzelf in beeld</h3><p>Een kort filmpje van jezelf krijgt een nieuwe tekst of een andere taal, zonder opnieuw te filmen.</p></div>
-        <div class="optie"><h3>Professionele stem</h3><p>Keuze uit stemmen: man of vrouw, warm of energiek, Nederlands of een andere taal.</p></div>
-        <div class="optie"><h3>Muziek die past</h3><p>Muziek op maat, met een opbouw die bij jouw film hoort.</p></div>
-        <div class="optie"><h3>Foto's opgefrist</h3><p>Beter licht en meer sfeer in je eigen foto's. Je pand en je team blijven echt.</p></div>
-        <div class="optie"><h3>Bewegend beeld</h3><p>Je pand, werkplaats of producten komen in beweging, ook als je alleen foto's hebt.</p></div>
-        <div class="optie"><h3>Producten vrijstaand</h3><p>Productfoto's zonder rommelige achtergrond, allemaal in dezelfde stijl.</p></div>
-        <div class="optie"><h3>Ondertiteling in je huisstijl</h3><p>Voor wie zonder geluid kijkt, op social media bijvoorbeeld.</p></div>
-        <div class="optie"><h3>Tweede taal</h3><p>Dezelfde film in het Engels, Duits of een andere taal.</p></div>
-        <div class="optie"><h3>Elk formaat</h3><p>Liggend voor je website, staand en vierkant voor social media.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="vergelijk" class="aanbod-bg">
-    <div class="wrap">
-      <h2>Hoe het zich verhoudt</h2>
-      <p class="intro">Een bedrijfsfilm van een productiehuis is goed, maar duur en traag. Wij maken hetzelfde soort film, sneller en voor een vaste prijs.</p>
-      <table>
-        <thead>
-          <tr><th></th><th>Overtake Media</th><th>Productiehuis</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Bedrijfsfilm</td><td>€ 895, nu € 595</td><td>€ 1.500 tot € 5.000</td></tr>
-          <tr><td>Korte film voor social media</td><td>€ 149</td><td>€ 800 tot € 2.500</td></tr>
-          <tr><td>Eigen versie per vestiging</td><td>€ 349</td><td>€ 300 tot € 800, plus opzet van € 2.000 tot € 4.000</td></tr>
-          <tr><td>Productfilm, per product</td><td>€ 49</td><td>€ 300 tot € 800</td></tr>
-          <tr><td>Eerste versie</td><td>5 werkdagen</td><td>3 tot 6 weken</td></tr>
-          <tr><td>Jouw eigen tijd</td><td>Een intakeformulier en je foto's</td><td>Een draaidag op locatie, plus overleg</td></tr>
-          <tr><td>Prijs vooraf bekend</td><td>Ja</td><td>Offerte</td></tr>
-          <tr><td>Liggend en staand</td><td>Altijd inbegrepen</td><td>Vaak een extra formaat tegen meerprijs</td></tr>
-        </tbody>
-      </table>
-      <p class="bron">Prijzen en levertijden van productiehuizen: gangbare tarieven van Nederlandse videobureaus en freelancers, oktober 2026. Alle prijzen exclusief btw.</p>
-    </div>
-  </section>
-
-  <section id="websites" class="websites">
-    <div class="wrap">
-      <h2>Ook je website</h2>
-      <p class="intro">Een film werkt het best op een site die erbij past. Daarom bouwen we ook websites: in jouw huisstijl, met een vaste prijs vooraf.</p>
-      <div class="kaarten">
-
-        <div class="kaart">
-          <h3>Website in jouw huisstijl</h3>
-          <p class="wat">Eén heldere pagina waarop alles staat: wat je doet, je werk in foto's, je werkgebied en hoe klanten je bereiken. In jouw kleuren en lettertype, en goed leesbaar op de telefoon. Heb je een film van ons, dan staat die erin.</p>
-          <div class="prijs">€ 495 eenmalig, daarna € 29 per maand<small>voor hosting, onderhoud en kleine tekstwijzigingen</small></div>
-          <div class="proef"><strong>Film en website samen?</strong> Dan sluiten ze op elkaar aan: hetzelfde verhaal in dezelfde stijl.</div>
-          <div class="vb">Voorbeeld: volgt</div>
-        </div>
-
-        <div class="kaart">
-          <h3>Maatwerk in overleg</h3>
-          <p class="wat">Meer pagina's, een webshop, een offerteformulier, een tweede taal of iets heel anders: het is allemaal bespreekbaar. Vertel wat je voor ogen hebt, dan kijken we samen wat past.</p>
-          <div class="prijs">Prijs in overleg<small>altijd vooraf bekend, voordat we beginnen</small></div>
-          <div class="vb"><a href="mailto:info@overtakemedia.nl?subject=Vraag%20over%20een%20website">Stuur een mail met wat je zoekt</a></div>
-        </div>
-
-      </div>
-      <p class="noot">Alle prijzen exclusief btw.</p>
-    </div>
-  </section>
-
-  <section id="werkwijze">
-    <div class="wrap">
-      <h2>Zo werkt het</h2>
-      <p class="intro">Zes stappen, van aanvraag tot definitieve film. Jij bepaalt het tempo.</p>
-      <div class="stappen">
-        <div class="stap"><h3>Aanvraag</h3><p>Klik op "Vraag een film aan" of stuur een mail naar info@overtakemedia.nl. Binnen 1 werkdag krijg je van ons het intakeformulier.</p></div>
-        <div class="stap"><h3>Intake</h3><p>Je beantwoordt de vragen van het intakeformulier, per mail of WhatsApp: wat je doet, voor wie, welke film je wilt en wat je wilt vertellen. Daarop staat ook precies wat we nodig hebben: je logo en foto's en korte filmpjes van je bedrijf. Met je telefoon gemaakt is prima.</p></div>
-        <div class="stap"><h3>Scenario</h3><p>Binnen 2 werkdagen krijg je het scenario, met de overeenkomst erbij: het verhaal, de tekst van de stem, welke beelden waar komen en de vaste prijs. Jij past aan of geeft akkoord met één klik. Na je akkoord en de eerste helft van de betaling beginnen wij.</p></div>
-        <div class="stap"><h3>Eerste versie</h3><p>Binnen 3 werkdagen na je betaling staat de eerste versie van je film, met een watermerk om te beoordelen: stem, muziek en montage in jouw huisstijl. Slimme software doet het tijdrovende werk; het verhaal, de beeldkeuze en de eindcontrole doen wij zelf.</p></div>
-        <div class="stap"><h3>Jouw opmerkingen</h3><p>Je bekijkt de eerste versie en geeft in één keer je opmerkingen door: tekst, volgorde, een beeldwissel. Eén ronde, dan is het klaar.</p></div>
-        <div class="stap"><h3>Definitieve film</h3><p>Binnen 3 werkdagen na jouw opmerkingen krijg je de film liggend en staand, in de juiste bestanden voor website, social media en presentaties. Na de laatste betaling krijg je de film.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="vragen" class="aanbod-bg">
-    <div class="wrap">
-      <h2>Veelgestelde vragen</h2>
-      <div class="vragen">
-        <details>
-          <summary>Wat kost een bedrijfsfilm laten maken?</summary>
-          <p>Een bedrijfsfilm van één minuut kost bij ons € 895; de eerste 10 klanten betalen € 595. Een korte film voor social media kost € 149 per film, na een eenmalige opzet van € 295 met je eerste film. Je weet de prijs altijd vooraf en er komen geen kosten voor een draaidag bij. Alle prijzen zijn exclusief btw.</p>
-        </details>
-        <details>
-          <summary>Moet ik zelf voor de camera?</summary>
-          <p>Nee. Foto's en korte filmpjes van je bedrijf, je werk en je team zijn genoeg; een professionele stem spreekt de tekst in. Wil je zelf in de film spreken, dan kan dat ook: met een kort telefoonfilmpje of een spraakbericht.</p>
-        </details>
-        <details>
-          <summary>Hoe kan het zo snel en betaalbaar?</summary>
-          <p>Elke film wordt gebouwd op een vast sjabloon in jouw huisstijl, en slimme software neemt het tijdrovende werk over: beeld bewerken, stem, muziek, montage. Daardoor hoeven wij geen draaidag te plannen en geen dagen te monteren. Wat overblijft is het werk dat ertoe doet: het verhaal, de beeldkeuze en de controle.</p>
-        </details>
-        <details>
-          <summary>Gebruiken jullie AI?</summary>
-          <p>Ja, daar zijn we open over. We gebruiken AI voor de stem, de muziek, het bewerken van beeld en de montage. Dat is precies waarom een film bij ons in dagen klaar is in plaats van weken, en een fractie kost van wat een productiehuis vraagt. Het verhaal, de beeldkeuze en de eindcontrole doen wij zelf. En we laten nooit iets verzinnen dat niet klopt: je pand, je team en je producten blijven echt.</p>
-        </details>
-        <details>
-          <summary>Van wie is de film?</summary>
-          <p>De film blijft van Overtake Media, maar jij mag hem onbeperkt en zonder einddatum gebruiken voor je eigen promotie: website, social media, presentaties, beurzen. Wij mogen hem als voorbeeld laten zien, tenzij je daar bezwaar tegen hebt. Hoe we met je gegevens en je materiaal omgaan, lees je in onze <a href="privacy.html">privacyverklaring</a>.</p>
-        </details>
-        <details>
-          <summary>Wat als ik niet tevreden ben?</summary>
-          <p>Je ziet eerst het scenario en geeft daar je akkoord op; daarna krijg je de eerste versie en één ronde om aanpassingen door te geven. Wil je daarna nog iets veranderen, dan kost een extra ronde € 75. Je betaalt de helft bij je akkoord op het scenario en de helft als de definitieve film klaar is; de definitieve film krijg je na de laatste betaling.</p>
-        </details>
-        <details>
-          <summary>Zijn er extra kosten?</summary>
-          <p>Alleen als je er zelf om vraagt. Een extra versie van je bedrijfsfilm (andere taal, andere doelgroep) kost € 349. Spoed kost € 195 extra; we spreken dan samen af wanneer je wat krijgt. Een extra correctieronde € 75. Meer dan 24 films per jaar? Dan maken we een offerte op maat. Alle prijzen zijn exclusief btw.</p>
-        </details>
-        <details>
-          <summary>Hoe lang duurt het in totaal?</summary>
-          <p>Na je aanvraag per mail krijg je binnen 1 werkdag het intakeformulier. Na ontvangst van je antwoorden heb je binnen 2 werkdagen het scenario, en na je akkoord en betaling binnen 3 werkdagen de eerste versie. Na jouw opmerkingen is de definitieve film binnen 3 werkdagen klaar. Bij spoed denken we mee.</p>
-        </details>
-        <details>
-          <summary>Maken jullie ook websites?</summary>
-          <p>Ja. Een website van één pagina in jouw huisstijl kost € 495 eenmalig, daarna € 29 per maand voor hosting, onderhoud en kleine tekstwijzigingen. Wil je meer, zoals extra pagina's of een webshop, dan bespreken we wat past en hoor je de prijs vooraf. Alle prijzen zijn exclusief btw.</p>
-        </details>
-        <details>
-          <summary>Wat moet ik aanleveren?</summary>
-          <p>Weinig, en wij sturen je erin. Je krijgt van ons een intakeformulier met een paar korte vragen: wat je doet, voor wie, welke film je wilt en wat je wilt vertellen. Daarop staat ook precies welk materiaal we nodig hebben en hoe je het maakt: je logo, foto's en korte filmpjes van je bedrijf, liggend, bij daglicht, 5 tot 15 seconden. Twijfel je ergens over, dan denken we mee.</p>
-        </details>
+      <h2>Waarom Overtake Media</h2>
+      <p class="intro">Film en website van één maker: hetzelfde verhaal, in dezelfde stijl.</p>
+      <div class="redenen">
+        <div class="optie"><h3>Vaste prijs vooraf</h3><p>Je weet wat het kost voordat we beginnen. Geen uurtje factuurtje.</p></div>
+        <div class="optie"><h3>In jouw huisstijl</h3><p>Jouw kleuren, lettertype en logo. Je bedrijf blijft herkenbaar, in beeld en online.</p></div>
+        <div class="optie"><h3>Eén aanspreekpunt</h3><p>Je mailt, belt of appt met Daniella. Op een mail krijg je binnen één werkdag antwoord.</p></div>
       </div>
     </div>
   </section>
@@ -387,12 +74,12 @@
   <section id="contact" class="contact">
     <div class="wrap">
       <h2>Contact</h2>
-      <p class="intro">We maken promotiefilms en websites voor ondernemers in heel Nederland, zonder draaidag op locatie. Benieuwd wat een film of een website voor jouw bedrijf kan doen? Stuur een mail of bel Daniella, dan denken we met je mee. Op een mail krijg je binnen één werkdag antwoord.</p>
+      <p class="intro">We maken promotiefilms en websites voor ondernemers in heel Nederland. Benieuwd wat een film of een website voor jouw bedrijf kan doen? Stuur een mail of bel Daniella, dan denken we met je mee. Op een mail krijg je binnen één werkdag antwoord.</p>
       <div class="contact-regels">
-        <div><small>Mail</small><a href="mailto:info@overtakemedia.nl?subject=Vraag%20over%20een%20promotiefilm">info@overtakemedia.nl</a></div>
+        <div><small>Mail</small><a href="mailto:info@overtakemedia.nl?subject=Vraag%20aan%20Overtake%20Media">info@overtakemedia.nl</a></div>
         <div><small>Bel of app</small><a href="tel:+31617736558">Daniella, 06 17 73 65 58</a></div>
       </div>
-      <p style="margin-top:36px"><a class="knop" href="mailto:info@overtakemedia.nl?subject=Vraag%20over%20een%20promotiefilm">Vraag een film aan</a></p>
+      <p style="margin-top:36px"><a class="knop" href="mailto:info@overtakemedia.nl?subject=Vraag%20aan%20Overtake%20Media">Stuur een mail</a></p>
     </div>
   </section>
 </main>
@@ -410,14 +97,6 @@
 <script>
   var knop=document.querySelector('.omhoog');
   window.addEventListener('scroll', function(){ knop.classList.toggle('zichtbaar', window.scrollY>600); });
-  document.querySelectorAll('a[data-film]').forEach(function(a){
-    a.addEventListener('click', function(){
-      var box=document.getElementById(a.dataset.film); var v=box&&box.querySelector('video');
-      if(!v) return;
-      document.querySelectorAll('video').forEach(function(o){ if(o!==v) o.pause(); });
-      setTimeout(function(){ v.play(); }, 400);
-    });
-  });
 </script>
 </body>
 </html>
