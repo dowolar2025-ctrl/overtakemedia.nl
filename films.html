@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="stijl.css?v=6">
+<link rel="stylesheet" href="stijl.css?v=7">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Overtake Media", "url": "https://overtakemedia.nl/", "email": "info@overtakemedia.nl", "telephone": "+31617736558", "logo": "https://overtakemedia.nl/img/icoon.png", "image": "https://overtakemedia.nl/img/lindehof.jpg", "description": "Overtake Media maakt korte promotiefilms voor het mkb: bedrijfsfilms, productfilms, ketenfilms en campagnefilms voor social media. Eerste versie binnen vijf werkdagen, vaste prijs vooraf, zonder draaidag.", "areaServed": {"@type": "Country", "name": "Nederland"}, "priceRange": "€149 - €895", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Promotiefilms", "itemListElement": [{"@type": "Offer", "name": "Bedrijfsfilm", "price": "895", "priceCurrency": "EUR", "description": "Film van één minuut over je bedrijf, liggend en staand."}, {"@type": "Offer", "name": "Productfilms", "price": "49", "priceCurrency": "EUR", "description": "Per product een film van 20 tot 30 seconden, na € 995 opzet, vanaf 20 producten."}, {"@type": "Offer", "name": "Ketenfilm", "price": "349", "priceCurrency": "EUR", "description": "Per vestiging een eigen versie van de bedrijfsfilm, na een basisfilm van € 895."}, {"@type": "Offer", "name": "Campagnefilm", "price": "149", "priceCurrency": "EUR", "description": "Korte film van 15 tot 30 seconden voor social media, na € 295 opzet met de eerste film."}, {"@type": "Offer", "name": "Website in jouw huisstijl", "price": "395", "priceCurrency": "EUR", "description": "Website van één pagina in de huisstijl van de klant, daarna € 29 per maand voor hosting, onderhoud en kleine tekstwijzigingen. Maatwerk en webshops in overleg."}]}}</script>
 </head>
 <body>
@@ -82,7 +82,7 @@
           <p class="wat">Voor ketens en franchise: één bedrijfsfilm waarin het hele bedrijf zich herkent, en voor elke vestiging een eigen versie. Alle films hebben dezelfde stijl en opbouw, maar elke vestiging levert eigen beelden en eigen verhaal aan: het eigen team, wat hen bijzonder maakt en de sfeer die daar hangt. Zo krijgt elke vestiging haar eigen film.</p>
           <div class="prijs">€ 895 voor de basisfilm, daarna € 349 per vestiging</div>
           <div class="proef"><strong>Eerst proberen?</strong> Eén vestiging als proef voor € 595. Gaat de keten door, dan is de proef meteen de basisfilm.</div>
-          <div class="vb">Voorbeeld: volgt</div>
+          <div class="vb">Voorbeeld: <a href="#film-keten" data-film="film-keten">bekijk de ketenfilm van de autoservice</a></div>
         </div>
 
         <div class="kaart">
@@ -90,7 +90,7 @@
           <p class="wat">Korte films van 15 tot 30 seconden voor social media, over één onderwerp van het moment: een actie, een vacature, een nieuw product, een seizoensboodschap.</p>
           <div class="prijs">€ 295 voor de opzet met je eerste film, daarna € 149 per film</div>
           <div class="proef"><strong>Eerst proberen?</strong> Je eerste campagnefilm voor € 195, inclusief opzet. Ga je door, dan is de proef je basis.</div>
-          <div class="vb">Voorbeeld: volgt</div>
+          <div class="vb">Voorbeeld: <a href="#film-campagne" data-film="film-campagne">bekijk de campagnefilm van de hovenier</a></div>
         </div>
 
       </div>
@@ -102,8 +102,13 @@
   <section id="voorbeelden" class="aanbod-bg">
     <div class="wrap">
       <h2>Voorbeelden</h2>
-      <p class="intro">Twee films die laten zien wat we maken: een bedrijfsfilm voor een hovenier en een productfilm voor een servieslijn.</p>
+      <p class="intro">Vier films die laten zien wat we maken, één van elke soort.</p>
       <div class="films">
+        <div class="film breed" id="film-keten">
+          <video src="films/dalhuis.mp4" poster="img/dalhuis.jpg" controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
+          <h3>Ketenfilm · autoservice</h3>
+          <p>Anderhalve minuut, liggend formaat. Eén verhaal voor de hele keten, met een eigen deel per vestiging.</p>
+        </div>
         <div class="film" id="film-hovenier">
           <video src="films/lindehof.mp4" poster="img/lindehof.jpg" controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
           <h3>Bedrijfsfilm · hovenier</h3>
@@ -114,8 +119,12 @@
           <h3>Productfilm · servieslijn</h3>
           <p>Vierkant formaat, voor webshop en social media.</p>
         </div>
+        <div class="film staand" id="film-campagne">
+          <video src="films/lindehof-najaar.mp4" poster="img/lindehof-najaar.jpg" controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" preload="none" playsinline></video>
+          <h3>Campagnefilm · hovenier</h3>
+          <p>Twintig seconden, staand formaat. Voor Stories en Reels.</p>
+        </div>
       </div>
-      <p class="volgt">Voorbeelden van een ketenfilm en een campagnefilm volgen binnenkort.</p>
     </div>
   </section>
 
