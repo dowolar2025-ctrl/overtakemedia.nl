@@ -39,6 +39,7 @@ nav a:hover { color:var(--wit); }
 .films { display:grid; grid-template-columns:16fr 9fr 5.0625fr; gap:28px; margin-top:40px; align-items:start; }
 .film.breed { grid-column:1 / -1; }
 .film video { width:100%; display:block; border-radius:6px; background:var(--antraciet); aspect-ratio:16/9; object-fit:cover; box-shadow:0 0 0 1px rgba(200,255,0,0.35), 0 0 14px 2px rgba(200,255,0,0.22); }
+.film.uitgelicht { margin-top:36px; }
 .film.vierkant video { aspect-ratio:1/1; }
 .film.staand video { aspect-ratio:9/16; }
 .film h3 { font-weight:800; font-size:18px; margin-top:14px; }

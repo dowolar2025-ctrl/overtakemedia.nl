@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="stijl.css?v=7">
+<link rel="stylesheet" href="stijl.css?v=8">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Overtake Media", "url": "https://overtakemedia.nl/websites.html", "email": "info@overtakemedia.nl", "telephone": "+31617736558", "logo": "https://overtakemedia.nl/img/icoon.png", "description": "Overtake Media bouwt websites voor het mkb in de huisstijl van de klant, met een vaste prijs vooraf. Maatwerk en webshops in overleg.", "areaServed": {"@type": "Country", "name": "Nederland"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Websites", "itemListElement": [{"@type": "Offer", "name": "Website in jouw huisstijl", "price": "395", "priceCurrency": "EUR", "description": "Website van één pagina in de huisstijl van de klant. Met hosting, onderhoud en kleine tekstwijzigingen voor € 29 per maand, als jaarabonnement."}]}}</script>
 </head>
 <body>
@@ -234,6 +234,18 @@
   kb.addEventListener('click', function(){ stap(1); });
   kv.addEventListener('click', function(e){ if(e.target===kv) sluit(); });
   document.addEventListener('keydown', function(e){ if(kv.hidden) return; if(e.key==='Escape') sluit(); if(e.key==='ArrowRight') stap(1); if(e.key==='ArrowLeft') stap(-1); });
+</script>
+<script>
+  /* nieuwe versie online? dan één keer de verse pagina ophalen (versie = nummer van stijl.css, gelijk aan versie.txt) */
+  (function(){
+    var l=document.querySelector('link[href^="stijl.css?v="]'); if(!l||!window.fetch) return;
+    var v=l.getAttribute('href').split('v=')[1];
+    fetch('versie.txt',{cache:'no-store'}).then(function(r){ return r.ok ? r.text() : ''; }).then(function(t){
+      t=t.trim(); if(!t||t===v) return;
+      try { if(sessionStorage.getItem('ververst')===t) return; sessionStorage.setItem('ververst',t); } catch(e){ return; }
+      location.replace(location.pathname+'?v='+t+location.hash);
+    }).catch(function(){});
+  })();
 </script>
 </body>
 </html>
