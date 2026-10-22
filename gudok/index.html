@@ -136,7 +136,7 @@ main{max-width:640px;margin:-22px auto 0;position:relative;
 </main>
 
 <footer class="om" id="om">
-  <a href="https://overtakemedia.nl" target="_blank" rel="noopener" aria-label="Overtake Media"><video id="omv" src="overtake-3d.mp4" muted playsinline preload="auto"></video></a>
+  <a href="https://overtakemedia.nl" target="_blank" rel="noopener" aria-label="Overtake Media"><video id="omv" src="overtake-3d.mp4" poster="overtake-3d.jpg" muted playsinline preload="auto"></video></a>
   <div class="om-info"><a href="mailto:info@overtakemedia.nl">info@overtakemedia.nl</a><a href="https://overtakemedia.nl" target="_blank" rel="noopener">overtakemedia.nl</a></div>
 </footer>
 
@@ -301,8 +301,8 @@ document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
 const om=document.getElementById("om"),omv=document.getElementById("omv"),omKlaar=()=>om.classList.add("in");
 omv.onended=omKlaar;
 new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();
-  if(matchMedia("(prefers-reduced-motion:reduce)").matches){omv.currentTime=3.9;omKlaar();return}
-  omv.play().catch(()=>{omv.currentTime=3.9;omKlaar()})},{threshold:.6}).observe(om);
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){omKlaar();return}
+  setTimeout(omKlaar,5000);omv.play().catch(omKlaar)},{threshold:.3}).observe(om);
 /* Beheer via overtakemedia.nl/gudok/#trainer */
 const viaHash=()=>{if(location.hash==="#trainer")document.getElementById("adminBtn").click()};addEventListener("hashchange",viaHash);viaHash();
 </script>
