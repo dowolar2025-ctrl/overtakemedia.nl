@@ -47,8 +47,6 @@ button,input{font:inherit;color:inherit}
 h1{font:800 italic clamp(40px,11vw,60px)/.92 var(--display);text-transform:uppercase;margin:10px 0 14px;letter-spacing:.005em;text-wrap:balance}
 h1 span{display:block;color:var(--gold)}
 .lead{margin:0;max-width:34em;opacity:.92}
-.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.fact{border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:600}
 
 main{max-width:640px;margin:-22px auto 0;position:relative;
   padding-left:max(14px,env(safe-area-inset-left,0px));padding-right:max(14px,env(safe-area-inset-right,0px));padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
@@ -80,8 +78,6 @@ main{max-width:640px;margin:-22px auto 0;position:relative;
 .btn-mine{background:var(--mine);color:#fff}
 .btn:disabled{opacity:.5;cursor:default}
 
-.note{color:var(--muted);font-size:14px;margin:18px 4px 0}
-.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;margin-top:22px;padding-top:14px;border-top:1px solid var(--rule);color:var(--muted);font-size:13px}
 .loading{padding:28px 16px;color:var(--muted);text-align:center}
 
 /* Sheet */
@@ -115,20 +111,13 @@ main{max-width:640px;margin:-22px auto 0;position:relative;
 .crest{animation:munt 7s cubic-bezier(.45,0,.2,1) .6s infinite}
 @keyframes munt{0%{transform:rotateY(0)}18%,100%{transform:rotateY(360deg)}}
 @media (prefers-reduced-motion:reduce){.crest{animation:none}}
-/* Maker */
-.maker{display:flex;flex-direction:column;align-items:center;gap:10px;margin:44px auto 16px;width:min(100%,360px);color:var(--muted);text-decoration:none;perspective:900px}
-.maker-t{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
-.logo3d{position:relative;display:block;width:100%;aspect-ratio:640/170;transform-style:preserve-3d;transform:rotateY(-110deg);transition:transform 1.8s cubic-bezier(.2,.75,.2,1)}
-.maker.in .logo3d{transform:rotateX(10deg) rotateY(-18deg)}
-.maker:hover .logo3d{transform:rotateX(5deg) rotateY(10deg)}
-.lyr{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.lyr:nth-child(1){transform:translateZ(-10px);color:var(--rule);--acc:#5c7500}
-.lyr:nth-child(2){transform:translateZ(-8px);color:var(--rule);--acc:#6b8800}
-.lyr:nth-child(3){transform:translateZ(-6px);color:var(--muted);--acc:#7d9e00}
-.lyr:nth-child(4){transform:translateZ(-4px);color:var(--muted);--acc:#90b500}
-.lyr:nth-child(5){transform:translateZ(-2px);color:var(--muted);--acc:#a8d400}
-.lyr:nth-child(6){color:var(--ink)}
-@media (prefers-reduced-motion:reduce){.logo3d{transition:none}}
+/* Overtake Media */
+.om{background:#1E1C24;margin-top:40px;padding:8px 16px calc(34px + env(safe-area-inset-bottom,0px));text-align:center}
+.om video{display:block;width:min(100%,560px);aspect-ratio:1080/316;margin:0 auto;background:#1E1C24}
+.om-info{display:flex;flex-direction:column;gap:4px;margin-top:-4px;opacity:0;transform:translateY(6px);transition:opacity 1.6s ease,transform 1.6s ease}
+.om.in .om-info{opacity:1;transform:none}
+.om-info a{color:#D7D6D6;text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.14em}
+@media (prefers-reduced-motion:reduce){.om-info{transition:none}}
 </style>
 </head>
 <body>
@@ -137,21 +126,19 @@ main{max-width:640px;margin:-22px auto 0;position:relative;
     <div class="brand"><img class="crest" id="crest" alt="Clublogo T.S.V. Gudok" width="96" height="96" hidden><div class="club">T.S.V. Gudok · JO11-4</div></div>
     <h1>Spelers&shy;gesprekken <span>na de herfst&shy;vakantie</span></h1>
     <p class="lead">Kort gesprek van 10 minuten met je kind en de trainer. Eén ouder schuift aan. Kies hieronder een vrije tijd.</p>
-    <div class="facts"><span class="fact">10 minuten</span><span class="fact">Kind + 1 ouder</span><span class="fact">Rond de training</span></div>
   </div>
 </header>
 
 <main>
   <div id="mine"></div>
   <div id="days"><div class="loading">Tijden ophalen…</div></div>
-  <p class="note">Je kiest één vaste tijd. Lukt die toch niet? Stuur de trainer een appje.</p>
-  <div class="foot"><span id="upd">&nbsp;</span><button class="btn btn-ghost" id="adminBtn" type="button">Trainer</button></div>
-  <a class="maker" id="maker" href="https://overtakemedia.nl" target="_blank" rel="noopener" aria-label="Gemaakt door Overtake Media">
-    <span class="maker-t">Gemaakt door</span>
-    <span class="logo3d"><svg class="lyr" viewBox="0 0 640 170" aria-hidden="true"><use href="#om"/></svg><svg class="lyr" viewBox="0 0 640 170" aria-hidden="true"><use href="#om"/></svg><svg class="lyr" viewBox="0 0 640 170" aria-hidden="true"><use href="#om"/></svg><svg class="lyr" viewBox="0 0 640 170" aria-hidden="true"><use href="#om"/></svg><svg class="lyr" viewBox="0 0 640 170" aria-hidden="true"><use href="#om"/></svg><svg class="lyr" viewBox="0 0 640 170" aria-hidden="true"><use href="#om"/></svg></span>
-  </a>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="om" viewBox="0 0 640 170"><polygon points="36,104 470,104 420,118 36,118" style="fill:var(--acc,#C8FF00)"/><polygon points="36,124 300,124 330,134 36,134" fill="currentColor" opacity="0.18"/><path d="M66.45599999999999 93.008Q60.408 93.008 55.296 91.064Q50.184 89.12 46.403999999999996 85.55600000000001Q42.624 81.992 40.536 77.24000000000001Q38.448 72.488 38.448 66.8Q38.448 61.112 40.536 56.36Q42.624 51.608000000000004 46.403999999999996 48.044000000000004Q50.184 44.480000000000004 55.296 42.536Q60.408 40.592000000000006 66.45599999999999 40.592000000000006Q72.576 40.592000000000006 77.65199999999999 42.536Q82.728 44.480000000000004 86.472 48.044000000000004Q90.216 51.608000000000004 92.34 56.36Q94.464 61.112 94.464 66.8Q94.464 72.488 92.34 77.276Q90.216 82.064 86.472 85.592Q82.728 89.12 77.65199999999999 91.064Q72.576 93.008 66.45599999999999 93.008ZM66.45599999999999 81.2Q69.336 81.2 71.82 80.19200000000001Q74.304 79.184 76.14 77.276Q77.976 75.368 79.02 72.70400000000001Q80.064 70.04 80.064 66.8Q80.064 63.488 79.02 60.86Q77.976 58.232 76.14 56.324Q74.304 54.416000000000004 71.82 53.408Q69.336 52.400000000000006 66.45599999999999 52.400000000000006Q63.57599999999999 52.400000000000006 61.092 53.408Q58.608 54.416000000000004 56.772 56.324Q54.936 58.232 53.891999999999996 60.86Q52.848 63.488 52.848 66.8Q52.848 70.04 53.891999999999996 72.70400000000001Q54.936 75.368 56.772 77.276Q58.608 79.184 61.092 80.19200000000001Q63.57599999999999 81.2 66.45599999999999 81.2Z M115.704 92.0 94.176 41.6H109.584L127.728 85.232H118.65599999999999L137.232 41.6H151.344L129.744 92.0Z M154.29599999999996 92.0V41.6H193.82399999999996V52.616H168.40799999999996V80.984H194.75999999999996V92.0ZM167.39999999999998 71.768V61.112H190.79999999999995V71.768Z M202.67999999999995 92.0V41.6H225.21599999999995Q236.23199999999997 41.6 242.17199999999997 46.604Q248.11199999999997 51.608000000000004 248.11199999999997 60.248000000000005Q248.11199999999997 65.936 245.37599999999998 70.07600000000001Q242.63999999999996 74.21600000000001 237.63599999999997 76.412Q232.63199999999995 78.608 225.71999999999997 78.608H210.59999999999997L216.93599999999995 72.632V92.0ZM233.85599999999994 92.0 221.32799999999995 73.64H236.51999999999995L249.11999999999995 92.0ZM216.93599999999995 74.144 210.59999999999997 67.592H224.85599999999997Q229.31999999999996 67.592 231.51599999999996 65.648Q233.71199999999996 63.704 233.71199999999996 60.248000000000005Q233.71199999999996 56.720000000000006 231.51599999999996 54.776Q229.31999999999996 52.832 224.85599999999997 52.832H210.59999999999997L216.93599999999995 46.28Z M265.96799999999996 92.0V52.904H250.48799999999997V41.6H295.63199999999995V52.904H280.22399999999993V92.0Z M292.392 92.0 314.64 41.6H328.67999999999995L351.0 92.0H336.16799999999995L318.74399999999997 48.584H324.35999999999996L306.936 92.0ZM304.56 82.208 308.23199999999997 71.696H332.856L336.52799999999996 82.208Z M367.77599999999995 80.84 366.984 64.856 388.65599999999995 41.6H404.352L382.75199999999995 65.0L374.83199999999994 73.28ZM355.032 92.0V41.6H369.14399999999995V92.0ZM388.87199999999996 92.0 372.45599999999996 71.19200000000001 381.74399999999997 61.256 405.43199999999996 92.0Z M409.176 92.0V41.6H448.70399999999995V52.616H423.28799999999995V80.984H449.64V92.0ZM422.28 71.768V61.112H445.67999999999995V71.768Z" fill="currentColor"/><path d="M41.15 163.0V142.0H43.61L53.03 157.87H51.71L61.01 142.0H63.47L63.5 163.0H60.62L60.59 146.53H61.28L53.0 160.45H51.62L43.28 146.53H44.03V163.0Z M77.80000000000001 163.0V142.0H92.62V144.61H80.80000000000001V160.39H93.04V163.0ZM80.53 153.61V151.06H91.33000000000001V153.61Z M105.9 163.0V142.0H114.75Q118.11 142.0 120.675 143.32Q123.24 144.64 124.66499999999999 147.01Q126.09 149.38 126.09 152.5Q126.09 155.62 124.66499999999999 157.99Q123.24 160.36 120.675 161.68Q118.11 163.0 114.75 163.0ZM108.9 160.39H114.57Q117.18 160.39 119.08500000000001 159.39999999999998Q120.99 158.41 122.03999999999999 156.625Q123.09 154.84 123.09 152.5Q123.09 150.13 122.03999999999999 148.36Q120.99 146.59 119.08500000000001 145.60000000000002Q117.18 144.61 114.57 144.61H108.9Z M138.68 163.0V142.0H141.68V163.0Z M152.8 163.0 162.31 142.0H165.28L174.82000000000002 163.0H171.67000000000002L163.18 143.68H164.38000000000002L155.89000000000001 163.0ZM156.85000000000002 157.75 157.66000000000003 155.35H169.48000000000002L170.35000000000002 157.75Z" fill="currentColor"/></symbol></svg>
+  <span id="upd" hidden></span><button id="adminBtn" type="button" hidden></button>
 </main>
+
+<footer class="om" id="om">
+  <a href="https://overtakemedia.nl" target="_blank" rel="noopener" aria-label="Overtake Media"><video id="omv" src="overtake-3d.mp4" muted playsinline preload="auto"></video></a>
+  <div class="om-info"><a href="mailto:info@overtakemedia.nl">info@overtakemedia.nl</a><a href="https://overtakemedia.nl" target="_blank" rel="noopener">overtakemedia.nl</a></div>
+</footer>
 
 <div id="modal"></div>
 
@@ -311,7 +298,13 @@ function showAdmin(rows){
 load();
 setInterval(()=>{if(!document.getElementById("scrim"))load()},20000);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
-new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){es[0].target.classList.add("in");o.disconnect()}},{threshold:.5}).observe(document.getElementById("maker"));
+const om=document.getElementById("om"),omv=document.getElementById("omv"),omKlaar=()=>om.classList.add("in");
+omv.onended=omKlaar;
+new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){omv.currentTime=3.9;omKlaar();return}
+  omv.play().catch(()=>{omv.currentTime=3.9;omKlaar()})},{threshold:.6}).observe(om);
+/* Beheer via overtakemedia.nl/gudok/#trainer */
+const viaHash=()=>{if(location.hash==="#trainer")document.getElementById("adminBtn").click()};addEventListener("hashchange",viaHash);viaHash();
 </script>
 </body>
 </html>
