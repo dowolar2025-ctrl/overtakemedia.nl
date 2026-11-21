@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MyLife · 23 clubs klaar voor januari</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --nacht:#0c1013; --donker:#14181c; --vlak:#1b2127; --lijn:#2b333b; --wit:#fff; --zacht:#a9b4bf; --cyaan:#3fbfbb; --cyaan-l:#8fe3df; --goud:#d9b55e; --goud-l:#f0d79a; }
+  * { box-sizing:border-box; margin:0; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--nacht); color:var(--wit); font:17px/1.6 Poppins,system-ui,sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  img, video { display:block; max-width:100%; }
+  .kop { font-family:"Barlow Semi Condensed",sans-serif; font-weight:800; text-transform:uppercase; line-height:.98; letter-spacing:-.01em; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 24px; }
+  .oog { font-weight:600; font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:var(--cyaan-l); }
+  .knop { display:inline-flex; align-items:center; gap:10px; font:600 16px Poppins,sans-serif; padding:15px 26px; border-radius:40px; border:0; cursor:pointer; text-decoration:none; transition:transform .15s, background .15s; }
+  .knop:hover { transform:translateY(-2px); }
+  .knop.vol { background:var(--goud); color:#17130a; } .knop.vol:hover { background:var(--goud-l); }
+  .knop.lijn { background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.35); backdrop-filter:blur(6px); }
+  .regenboog { height:4px; background:linear-gradient(90deg,#e8443a,#f39a2b,#f5d33f,#58b947,#3fbfbb,#3d7fd9,#8b4fc9); }
+
+  /* Opening */
+  .held { position:relative; min-height:min(100svh,980px); display:flex; flex-direction:column; overflow:hidden; }
+  .held video { position:absolute; inset:0; left:auto; width:64%; height:100%; object-fit:cover; object-position:62% 50%; animation:zoom 14s ease-out both; }
+  @keyframes zoom { from { transform:scale(1.12); } to { transform:scale(1); } }
+  .held video { z-index:0; }
+  .held .netwerk { --l:calc(max(24px, (100% - 1180px) / 2 + 24px) + max(610px, min(6.8vw, 100px) * 6.6 + 40px)); position:absolute; z-index:1; left:var(--l); width:calc(98% - var(--l)); top:9%; height:84%; object-fit:contain; object-position:50% 50%; opacity:.95; }
+  .held h1.kop { font-size:clamp(54px,6.8vw,100px); } .held .midden p.in { max-width:560px; }
+  .held .netwerk { z-index:2; }
+  .held .midden { padding-top:56px; }
+  .knop.hfd { background:rgba(63,191,187,.1); color:var(--cyaan-l); border:1px solid rgba(63,191,187,.55); padding:11px 18px; font-size:15px; backdrop-filter:blur(6px); }
+  .held .knoppen { max-width:600px; gap:12px 10px; } .held .knoppen .breuk { flex-basis:100%; height:2px; }
+  .knop.hfd:hover { background:rgba(63,191,187,.2); border-color:var(--cyaan); }
+  html { scroll-behavior:smooth; }
+  .regio { position:relative; margin-top:64px; padding:36px 32px 30px; border:1px solid var(--goud); border-radius:18px; background:linear-gradient(180deg,#221d12,#171410); }
+  .regio::before { content:"Ons idee"; position:absolute; top:-13px; left:28px; background:var(--goud); color:#17130a; font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:4px 12px; border-radius:20px; }
+  .regio .spoor { margin-top:0; color:var(--goud-l); }
+  .regio h3.kop { font-size:clamp(30px,3.6vw,48px); margin:10px 0 0; }
+  .regio h3.kop em { font-style:normal; color:var(--goud); }
+  .meer { margin-top:28px; padding:28px 32px; border:1px solid var(--lijn); border-radius:18px; background:var(--vlak); }
+  .meer .spoor { margin-top:0; }
+  .meer .ideeen { display:grid; grid-template-columns:repeat(5,1fr); gap:24px; margin-top:20px; }
+  a.kaart { color:inherit; text-decoration:none; transition:border-color .2s, transform .2s; } a.kaart:hover { border-color:var(--cyaan); transform:translateY(-3px); }
+  #meer { scroll-margin-top:40px; }
+  .meer .ideeen b { display:block; font-size:16px; margin-bottom:6px; }
+  .meer .ideeen span { font-size:15px; color:var(--zacht); }
+  .meer .mee { margin-top:20px; font-size:15px; color:#e3e9ee; }
+  .aanbod .btw { margin-top:40px; padding-top:18px; border-top:1px solid var(--lijn); font-size:14px; color:var(--zacht); text-align:center; }
+  .regio .voorbeeld { margin-top:12px; color:#e3e9ee; font-size:17px; }
+  .regio .stappen { margin-top:30px; border-top-color:rgba(217,181,94,.35); }
+  .held .laag { opacity:0; transition:opacity 3.6s cubic-bezier(.45,0,.55,1) .8s; } .held .laag.aan { opacity:1; transition:opacity 3.2s cubic-bezier(.33,0,.2,1) 0s; }
+  .held::after { content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,#0c1013 0%,#0c1013 34%,rgba(12,16,19,.8) 46%,rgba(12,16,19,.5) 60%,rgba(12,16,19,.18) 76%,rgba(12,16,19,0) 94%),linear-gradient(180deg,rgba(8,11,14,.55) 0%,rgba(8,11,14,0) 22%,rgba(8,11,14,.2) 60%,rgba(8,11,14,.97) 100%); }
+  .held > * { position:relative; z-index:2; width:100%; }
+  .balk { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-top:22px; padding-bottom:22px; }
+  .balk .merk { display:flex; align-items:center; gap:16px; }
+  .balk .merk img.ml { height:32px; } .balk .merk img.om { height:30px; }
+  .balk .merk span { color:#e7ecf1; font-size:13px; }
+  .balk .rechts { display:flex; align-items:center; gap:14px; }
+  .balk .voor { font-size:13px; font-weight:500; color:#fff; background:rgba(8,11,14,.6); border:1px solid rgba(255,255,255,.3); padding:8px 16px; border-radius:30px; backdrop-filter:blur(6px); }
+  .balk .knop { padding:10px 20px; font-size:14px; }
+  .held .midden { margin-top:auto; padding-bottom:44px; }
+  .held h1 { font-size:clamp(54px,9.4vw,140px); margin:14px 0 20px; text-shadow:0 6px 40px rgba(0,0,0,.6); }
+  .held h1 em { font-style:normal; color:var(--goud); }
+  .held p.in { font-size:clamp(18px,2vw,23px); max-width:660px; color:#e7ecf1; margin-bottom:28px; }
+  .held .knoppen { display:flex; flex-wrap:wrap; gap:14px; }
+  .teller { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid rgba(255,255,255,.18); margin-top:38px; }
+  .teller div { padding:20px 0 0; }
+  .teller b { display:block; font-family:"Barlow Semi Condensed",sans-serif; font-weight:800; font-size:clamp(34px,4.6vw,60px); line-height:1; color:var(--cyaan-l); }
+  .teller span { color:var(--zacht); font-size:14px; }
+
+  section { padding:84px 0; }
+  .alleen-mobiel { display:none; }
+  h2 { font-size:clamp(40px,6vw,84px); margin:12px 0 18px; }
+  h2 em { font-style:normal; color:var(--goud); }
+  .lead { color:#d5dce3; font-size:19px; max-width:720px; }
+
+  /* Live proef */
+  .proef { background:var(--donker); }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin:34px 0 30px; }
+  .chip { font:500 15px Poppins,sans-serif; color:#dfe6ec; background:var(--vlak); border:1px solid var(--lijn); padding:9px 16px; border-radius:30px; cursor:pointer; transition:.15s; }
+  .chip:hover { border-color:var(--cyaan); }
+  .chip.aan { background:var(--cyaan); border-color:var(--cyaan); color:#06201f; font-weight:600; }
+  .schermen { display:grid; grid-template-columns:1.9fr .62fr 1fr; gap:18px; align-items:stretch; }
+  .scherm { position:relative; border-radius:16px; overflow:hidden; background:#000 center/cover; border:1px solid var(--lijn); isolation:isolate; }
+  .scherm::before { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(6,9,12,.2),rgba(6,9,12,.86)); z-index:-1; }
+  .scherm .soort { position:absolute; top:14px; left:14px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; background:rgba(0,0,0,.55); padding:5px 11px; border-radius:20px; color:var(--goud-l); }
+  .scherm img.logo { position:absolute; top:16px; right:16px; height:18px; }
+  .liggend { aspect-ratio:16/9; }
+  .liggend .tekst { position:absolute; left:6%; bottom:9%; right:6%; }
+  .liggend .tijd { font-weight:700; letter-spacing:.2em; color:var(--cyaan-l); font-size:clamp(12px,1.3vw,17px); }
+  .liggend .naam { font-size:clamp(34px,6.4vw,92px); }
+  .liggend .regel { font-size:clamp(13px,1.35vw,18px); color:#e3e9ee; margin-top:6px; }
+  .staand .tekst { position:absolute; left:9%; right:9%; bottom:8%; }
+  .staand .naam { font-size:clamp(22px,2.7vw,38px); }
+  .staand .regel { font-size:12px; color:#e3e9ee; margin-top:6px; }
+  .campagne { display:flex; flex-direction:column; justify-content:flex-end; padding:20px; }
+  .campagne .groot { font-size:clamp(34px,4.4vw,62px); color:var(--goud); }
+  .campagne .naam { font-size:clamp(20px,2.3vw,30px); margin-top:4px; }
+  .campagne .regel { font-size:13px; color:#e3e9ee; margin-top:8px; }
+  .wissel { animation:in .55s cubic-bezier(.2,.8,.2,1); }
+  @keyframes in { from { opacity:0; transform:translateY(22px) scale(.98); filter:blur(6px); } to { opacity:1; transform:none; filter:none; } }
+  .onder { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-top:16px; color:#cfd7df; font-size:15px; }
+  .onder b { color:#fff; }
+
+  /* Film */
+  .filmvak { display:grid; grid-template-columns:1.5fr 1fr; gap:44px; align-items:center; }
+  .speler { position:relative; border-radius:20px; overflow:hidden; border:1px solid var(--lijn); box-shadow:0 40px 110px rgba(0,0,0,.6); margin-top:36px; }
+  .speler video { width:100%; aspect-ratio:16/9; background:#000; }
+  .start { position:absolute; inset:0; width:100%; border:0; cursor:pointer; background:linear-gradient(180deg,rgba(8,11,14,.15),rgba(8,11,14,.6)); display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding-bottom:5%; gap:18px; color:#fff; font:600 17px Poppins,sans-serif; }
+  .start span { width:108px; height:108px; border-radius:50%; background:var(--goud); position:relative; box-shadow:0 0 0 14px rgba(217,181,94,.25); transition:transform .2s; }
+  .start span::after { content:""; position:absolute; left:42px; top:32px; border-left:34px solid #17130a; border-top:22px solid transparent; border-bottom:22px solid transparent; }
+  .start:hover span { transform:scale(1.08); }
+  .punten { list-style:none; padding:0; margin-top:30px; display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+  .punten li { padding:16px 0 0 34px; border-top:1px solid var(--lijn); position:relative; }
+  .punten li::before { content:""; position:absolute; left:4px; top:22px; width:12px; height:12px; border-radius:50%; background:var(--cyaan); }
+  .punten b { display:block; }
+  .punten span { color:var(--zacht); font-size:15px; }
+
+  /* Drie soorten */
+  .soorten { background:var(--donker); }
+  .drie { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:38px; }
+  .kaart { background:var(--vlak); border:1px solid var(--lijn); border-radius:18px; overflow:hidden; display:flex; flex-direction:column; }
+  .kaart .beeld { aspect-ratio:16/10; background:center/cover; position:relative; }
+  .kaart .beeld span { position:absolute; left:16px; bottom:14px; font-family:"Barlow Semi Condensed",sans-serif; font-weight:800; font-size:44px; line-height:1; text-shadow:0 3px 18px rgba(0,0,0,.7); }
+  .kaart .in { padding:20px 22px 24px; }
+  .kaart h3 { font-size:21px; margin-bottom:6px; }
+  .kaart p { color:var(--zacht); font-size:15px; }
+  .kaart .feit { margin-top:14px; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--cyaan-l); }
+
+  /* Planning */
+  .stappen { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:44px; border-top:2px solid var(--lijn); }
+  .spoor { margin-top:46px; font-weight:600; font-size:15px; letter-spacing:.14em; text-transform:uppercase; color:var(--cyaan-l); }
+  .spoor + .stappen { margin-top:22px; }
+  .drie-stappen { grid-template-columns:repeat(3,1fr); max-width:75%; }
+  .stappen.vijf { grid-template-columns:repeat(5,1fr); }
+  .stap { padding:22px 20px 0 0; position:relative; }
+  .stap::before { content:""; position:absolute; top:-8px; left:0; width:14px; height:14px; border-radius:50%; background:var(--goud); }
+  .stap .dat { font-family:"Barlow Semi Condensed",sans-serif; font-weight:800; font-size:30px; color:var(--goud); text-transform:uppercase; }
+  .stap b { display:block; margin:4px 0 4px; }
+  .stap span { color:var(--zacht); font-size:15px; }
+
+  /* Aanbod */
+  .aanbod { background:linear-gradient(180deg,var(--donker),var(--nacht)); }
+  .prijs { display:grid; grid-template-columns:1fr 1.15fr 1fr; gap:18px; margin-top:40px; align-items:stretch; }
+  .p { background:var(--vlak); border:1px solid var(--lijn); border-radius:18px; padding:26px 24px; }
+  .p.kern { border-color:var(--goud); background:#221d12; position:relative; }
+  .p.kern::before { content:"Begin hier"; position:absolute; top:-13px; left:24px; background:var(--goud); color:#17130a; font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:4px 12px; border-radius:20px; }
+  .p h3 { font-size:15px; letter-spacing:.14em; text-transform:uppercase; color:var(--cyaan-l); }
+  .p .bedrag { font-family:"Barlow Semi Condensed",sans-serif; font-weight:800; font-size:62px; line-height:1; margin:12px 0 4px; }
+  .p .per { color:var(--zacht); font-size:14px; }
+  .p ul { list-style:none; padding:0; margin-top:16px; }
+  .p li { padding:9px 0; border-top:1px solid var(--lijn); font-size:15px; color:#dfe6ec; }
+  .een { display:grid; grid-template-columns:1fr 1fr; gap:44px; margin-top:44px; align-items:center; }
+  .een .bedrag { font-size:96px; }
+  .daarna div { padding:18px 0; border-top:1px solid var(--lijn); display:grid; grid-template-columns:150px 1fr; gap:16px; }
+  .daarna b { color:var(--cyaan-l); font-size:13px; letter-spacing:.14em; text-transform:uppercase; padding-top:3px; }
+  .daarna span { color:#dfe6ec; }
+  .naast { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
+  .naast div { border:1px solid var(--lijn); border-radius:18px; padding:22px 24px; }
+  .naast b { font-family:"Barlow Semi Condensed",sans-serif; font-weight:800; font-size:44px; line-height:1; display:block; }
+  .naast .wij b { color:var(--goud); }
+  .naast span { color:var(--zacht); font-size:15px; }
+
+  /* Slot */
+  .slot { text-align:center; padding:120px 0 90px; position:relative; }
+  .slot h2 { font-size:clamp(46px,8vw,120px); }
+  .slot p { color:#d5dce3; max-width:620px; margin:0 auto 30px; font-size:19px; }
+  .slot .wie { margin-top:44px; color:var(--zacht); font-size:15px; line-height:1.8; }
+  .slot .wie img { height:40px; margin:0 auto 14px; }
+  .slot .wie a { color:inherit; text-decoration:none; } .slot .wie a:hover { text-decoration:underline; }
+  .om3d { display:block; width:min(520px,86vw); aspect-ratio:2.5/1; object-fit:cover; object-position:50% 43%; margin:0 auto 4px; mix-blend-mode:screen; filter:contrast(1.4) brightness(.8); -webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent); mask-image:radial-gradient(closest-side,#000 72%,transparent); }
+  .slot .wie small { display:block; margin-top:0; color:inherit; font-size:inherit; }
+  footer { border-top:1px solid var(--lijn); padding:22px 0; color:#a9b4bf; font-size:14px; text-align:center; }
+
+  .toon { opacity:0; transform:translateY(26px); transition:opacity .7s, transform .7s; }
+  .toon.zichtbaar { opacity:1; transform:none; }
+
+  @media (max-width:860px) {
+    section { padding:72px 0; }
+    .balk .voor, .balk .merk span, .balk .merk img.om { display:none; }
+    .held video { width:100%; height:360px; bottom:auto; object-position:50% 40%; }
+    .held .netwerk { left:0; top:64px; height:300px; width:100%; }
+    .held::after { background:linear-gradient(180deg,rgba(12,16,19,.6) 0,rgba(12,16,19,.05) 110px,rgba(12,16,19,.1) 230px,#0c1013 356px); }
+    .held .midden { padding-top:250px; margin-top:0; }
+    .held h1 { font-size:clamp(52px,15.5vw,96px); }
+    .teller { gap:14px; } .teller b { font-size:32px; }
+    .alleen-mobiel { display:block; margin:-12px 0 22px; color:var(--goud-l); } .held p.in { margin-bottom:22px; }
+    .punten { grid-template-columns:1fr; gap:0; } .start span { width:76px; height:76px; } .start span::after { left:29px; top:22px; border-left-width:24px; border-top-width:16px; border-bottom-width:16px; }
+    .schermen { grid-template-columns:1fr 1fr; } .liggend { grid-column:1 / -1; }
+    .staand { aspect-ratio:9/16; } .campagne { min-height:0; }
+    .filmvak, .drie, .prijs, .naast, .een { grid-template-columns:1fr; }
+    .een .bedrag { font-size:72px; } .daarna div { grid-template-columns:1fr; gap:4px; }
+    .stappen, .stappen.vijf { grid-template-columns:1fr 1fr; row-gap:26px; }
+    .regio { padding:30px 20px 24px; } .regio .stappen { grid-template-columns:1fr; }
+    .meer { padding:24px 20px; } .meer .ideeen { grid-template-columns:1fr 1fr; gap:20px 16px; } .drie-stappen { max-width:none; }
+    .chips { flex-wrap:nowrap; overflow-x:auto; margin-left:-24px; margin-right:-24px; padding:0 24px 8px; scrollbar-width:none; }
+    .chip { white-space:nowrap; }
+    .teller span { font-size:12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="held">
+  <img class="netwerk laag aan" src="netwerk.svg" alt="">
+  <video class="laag" src="pand-liggend.mp4" poster="stil-pand.jpg" muted playsinline preload="auto" data-tempo="0.33"></video>
+  <video class="laag" src="lounge-liggend.mp4" poster="stil-lounge.jpg" muted playsinline preload="auto" data-tempo="0.45"></video>
+  <div class="wrap balk">
+    <div class="merk"><img class="ml" src="logo_white.svg" alt="MyLife"><span>door</span><img class="om" src="om-wit.svg" alt="Overtake Media"></div>  </div>
+  <div class="wrap midden">
+    <div class="oog">Voorstel voor alle 23 clubs</div>
+    <h1 class="kop">Klaar voor<br>januari.<br><em>23 clubs.</em></h1>
+    <p class="in">Voor elke club een eigen film, met het eigen pand, het eigen team en de stem van de eigen clubmanager. Alle 23 clubs live vóór 1 januari, mooi op tijd voor uw campagne in januari.</p>
+        <div class="knoppen">
+      <a class="knop vol" href="#film" id="speel">▶ Bekijk het voorbeeld van MyLife Breda</a>
+      <span class="breuk"></span>
+      <a class="knop hfd" href="#proef">Kies een club</a>
+      <a class="knop hfd" href="#pakket">Wat MyLife krijgt</a>
+      <a class="knop hfd" href="#planning">Planning</a>
+      <a class="knop hfd" href="#aanbod">Aanbod</a>
+    </div>
+    <div class="teller">
+      <div><b>23</b><span>clubs, elk een eigen film</span></div>
+      <div><b>1 jan</b><span>alle clubfilms live</span></div>
+      <div><b>Per regio</b><span>campagnes rondom iets in de regio van de club</span></div>
+    </div>
+  </div>
+</header>
+<div class="regenboog"></div>
+
+<section id="film">
+  <div class="wrap">
+    <div class="oog toon">Zo ziet het eruit</div>
+    <h2 class="kop toon">De film van <em>MyLife Breda</em></h2>
+    <p class="lead toon">Het voorbeeld voor alle 23 clubs: 90 seconden, in de huisstijl van MyLife, met de echte stem van de clubmanager.</p>
+    <div class="speler toon" id="speler">
+      <video id="hoofd" src="breda.mp4?v=3" poster="kaart.jpg" preload="metadata" playsinline></video>
+      <button class="start" id="start" aria-label="Speel de film af"><span></span><b>Speel de film af · 1:36</b></button>
+    </div>
+    <ul class="punten">
+      <li class="toon"><b>Het eigen pand en het eigen team</b><span>Geen beeldbank. De leden herkennen hun club.</span></li>
+      <li class="toon"><b>Twee formaten in één keer</b><span>Liggend voor website en schermen, staand voor sociale media.</span></li>
+      <li class="toon"><b>Ondertiteld</b><span>Werkt ook zonder geluid, in de club en op de telefoon.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="proef" id="proef">
+  <div class="wrap">
+    <div class="oog toon">Probeer het zelf</div>
+    <h2 class="kop toon">Kies een club.<br><em>Zie de film ontstaan.</em></h2>
+    <p class="lead toon">Eén vaste opbouw, 23 keer anders ingevuld. Zo ziet dezelfde film eruit voor elke club van MyLife.</p>
+    <div class="chips" id="chips"></div>
+    <div class="schermen">
+      <div class="scherm liggend" id="s1">
+        <span class="soort">Clubfilm · website en schermen</span><img class="logo" src="logo_white.svg" alt="">
+        <div class="tekst"><div class="tijd">07:00 · DE DEUREN GAAN OPEN</div><div class="kop naam" data-naam></div><div class="regel" data-regel></div></div>
+      </div>
+      <div class="scherm staand" id="s2">
+        <span class="soort">Staand · Instagram</span>
+        <div class="tekst"><div class="kop naam" data-naam></div><div class="regel">Voel je gelijk thuis</div></div>
+      </div>
+      <div class="scherm campagne" id="s3">
+        <span class="soort">Campagne · voorjaar</span>
+        <div class="kop groot">Klaar voor de zomer</div>
+        <div class="kop naam" data-naam></div>
+        <div class="regel">Eén campagne, voor elke club met de eigen naam en het eigen gezicht.</div>
+      </div>
+    </div>
+    <div class="onder"><span>Nu in beeld: <b id="nu"></b></span><span id="status"></span></div>
+  </div>
+</section>
+
+<section class="soorten" id="pakket">
+  <div class="wrap">
+    <div class="oog toon">Wat MyLife krijgt</div>
+    <h2 class="kop toon">Eerst de clubfilms.<br><em>Daarna campagnes en meer.</em></h2>
+    <div class="drie">
+      <div class="kaart toon"><div class="beeld" style="background-image:url(f-breda-pand.jpg)"><span>01</span></div><div class="in"><h3>Clubfilm</h3><p>De club, het team en de clubmanager in beeld. Voor de clubpagina, de schermen in de club en de nieuwe leden van januari.</p><div class="feit">90 seconden · per club</div></div></div>
+      <div class="kaart toon"><div class="beeld" style="background-image:url(f-groepslessen.jpg)"><span>02</span></div><div class="in"><h3>Campagnefilm</h3><p>Zomer, open dag, het nieuwe seizoen. Eén campagne voor de hele keten, per club met de eigen naam en het eigen gezicht. Wil MyLife per regio iets anders, dan kan dat: in Breda na carnaval, in Rotterdam rond de marathon.</p><div class="feit">15 tot 30 seconden · per actie</div></div></div>
+      <a class="kaart toon" href="#meer"><div class="beeld" style="background-image:url(f-yoga.jpg)"><span>03</span></div><div class="in"><h3>Samen verder</h3><p>Productfilms, ledenverhalen, trainers werven en meer. Ideeën die we samen met MyLife verder uitwerken.</p><div class="feit">Bekijk de ideeën ↓</div></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="planning">
+  <div class="wrap">
+    <div class="oog toon">De planning</div>
+    <h2 class="kop toon">Van ja naar <em>live.</em></h2>
+    <div class="spoor toon">De clubfilms: vóór 1 januari 2027 heeft elke club zijn eigen film</div>
+    <div class="stappen vijf">
+      <div class="stap toon"><div class="dat">1e week dec</div><b>Kiezen en aanleveren</b><span>Breda ligt er al. MyLife kiest twee clubs erbij. Die leveren foto's en een spraakbericht van de clubmanager aan.</span></div>
+      <div class="stap toon"><div class="dat">2e week dec</div><b>Maken en beoordelen</b><span>Wij maken de eerste drie films. U beoordeelt ze en denkt mee: wat u anders wilt, passen we aan.</span></div>
+      <div class="stap toon"><div class="dat">3e week dec</div><b>Definitief en live</b><span>Wij leveren de drie definitieve films op en ze gaan live. De andere clubs leveren intussen hun materiaal aan.</span></div>
+      <div class="stap toon"><div class="dat">Eind dec</div><b>Doorpakken</b><span>De eerste drie staan live. Nu maken we de overige 20 clubs, in dezelfde stijl. Elke club beoordeelt de eigen film voordat hij live gaat.</span></div>
+      <div class="stap toon"><div class="dat">1 jan 2027</div><b>Klaar voor januari</b><span>Elke club van MyLife heeft zijn eigen film, op tijd voor uw campagne in januari.</span></div>
+    </div>
+    <div class="regio toon">
+      <div class="spoor">Daarna: campagnes per regio</div>
+      <h3 class="kop">Elke club haakt in<br><em>op wat er in de buurt speelt.</em></h3>
+      <p class="voorbeeld">Drie voorbeelden. Voor de andere clubs zoeken we samen een eigen moment in de buurt.</p>
+      <div class="stappen">
+        <div class="stap"><div class="dat">Februari</div><b>Na carnaval</b><span>De Brabantse clubs, met een eigen film voor na de feestdagen.</span></div>
+        <div class="stap"><div class="dat">April</div><b>Marathon Rotterdam</b><span>De Rotterdamse clubs rond de marathon in hun eigen stad.</span></div>
+        <div class="stap"><div class="dat">September</div><b>Dam tot Damloop</b><span>De clubs in Noord-Holland rond de loop van Amsterdam naar Zaandam.</span></div>
+        <div class="stap"><div class="dat">En verder</div><b>Elke club een eigen moment</b><span>Eén campagne in de stijl van MyLife, met de eigen naam en het eigen gezicht.</span></div>
+      </div>
+    </div>
+    <div class="meer toon" id="meer">
+      <div class="spoor">Wat we samen verder kunnen uitwerken</div>
+      <div class="ideeen">
+        <div><b>Productfilms</b><span>Eén onderwerp kort uitgelicht, zoals de Mind studio, de kidsclub of MyCoach.</span></div>
+        <div><b>Trainers werven</b><span>Een vacaturefilm per club, met het eigen team in beeld.</span></div>
+        <div><b>Ledenverhalen</b><span>Leden vertellen zelf wat de club voor hen doet.</span></div>
+        <div><b>Schermen in de club</b><span>Korte films over lessen en acties op de schermen bij de balie.</span></div>
+        <div><b>Een nieuwe club</b><span>Een film rond de opening van een nieuwe vestiging.</span></div>
+      </div>
+      <p class="mee">Graag denken we hierover mee.</p>
+    </div>
+  </div>
+</section>
+
+<section class="aanbod" id="aanbod">
+  <div class="wrap">
+    <div class="oog toon">Het aanbod</div>
+    <h2 class="kop toon">Eén aanbod.<br><em>Voor alle 23 clubs.</em></h2>
+    <div class="een">
+      <div class="p kern toon">
+        <h3>Start met drie clubs</h3>
+        <div class="kop bedrag">€ 1.485</div>
+        <div class="per">3 × € 495</div>
+        <ul><li>De film van Breda definitief maken, plus twee clubs naar keuze</li><li>Drie clubfilms van 90 seconden, liggend en staand</li><li>Alles ter goedkeuring aan MyLife</li></ul>      </div>
+      <div class="daarna toon">
+        <div><b>Alle clubs</b><span>De overige 20 clubs een eigen film van maximaal 90 seconden: 20 × € 545. Vóór 1 januari heeft elke club zijn film.</span></div>
+        <div><b>Campagnes</b><span>Na januari een campagne voor de hele keten, per club afgestemd op wat er in de regio speelt: na carnaval in het zuiden, rond de Dam tot Damloop in Noord-Holland. Films van maximaal 30 seconden voor sociale media, € 149 per film, uitgaande van minimaal één film per club in 2027.</span></div>
+      </div>
+    </div>
+    <p class="btw toon">Alle prijzen zijn exclusief btw.</p>
+  </div>
+</section>
+
+<section class="slot" id="gesprek">
+  <div class="wrap">
+    <div class="oog toon">De volgende stap</div>
+    <h2 class="kop toon">Kies twee clubs.<br><em>Wij doen de rest.</em></h2>
+    <p class="toon">Laat weten welke twee clubs naast Breda als eerste mogen. Dan staan er half december drie clubs live, en heeft op 1 januari 2027 elke club zijn eigen film, klaar voor uw campagne in januari.</p>    <div class="wie toon"><video class="om3d" id="om3d" src="om-3d.mp4" muted loop playsinline preload="auto" aria-label="Overtake Media"></video>Koen Doors · <a href="tel:+31621522084">06-21522084</a> · <a href="mailto:info@overtakemedia.nl">info@overtakemedia.nl</a><small>Voorbeeldfilms voor andere branches staan op <a href="https://overtakemedia.nl/films.html" target="_blank" rel="noopener">overtakemedia.nl</a></small></div>
+  </div>
+</section>
+<div class="regenboog"></div>
+<footer><div class="wrap">Besloten voorstel voor de directie van MyLife. Beeld uit de film is van MyLife en alleen bedoeld voor intern gebruik en voor deze aanbieding.</div></footer>
+
+<script>
+const clubs = ["Breda","Berkel en Rodenrijs","Brielle","Diemen","Doetinchem","Dronten","Drunen","Goes","Heemskerk","Hendrik-Ido-Ambacht","Hoofddorp","Mill","Oostvoorne","Purmerend","Roden","Rotterdam aan de Maas","Rotterdam Terbregge","Terborg","Tilburg","Valkenburg","Velp","Voorschoten","Wageningen"];
+const ml = 'https://mylife.nl/wp-content/uploads/';
+const foto = {
+  "Breda": ["f-breda-binnen.jpg"],
+  "Berkel en Rodenrijs": [ml + "2024/01/my-life-HDR-foto-pand-website-formaat-scaled.jpg"],
+  "Brielle": [ml + "2026/04/pand-sportschool-brielle-website-1.jpg"],
+  "Diemen": [ml + "2026/06/pand-diemen.jpg", ml + "2026/06/pand-diemen-2.jpg"],
+  "Doetinchem": [ml + "2018/12/pand-doetinchem-web-scaled.jpg", ml + "2026/04/mylife-doetinchem-1920x700-1.jpg"],
+  "Dronten": [ml + "2026/06/pand-mylife-dronten-3.jpg", ml + "2026/01/pand-mylife-dronten.png"],
+  "Drunen": [ml + "2026/01/drunen-pand-edit2-web-e1769419127275.jpg"],
+  "Heemskerk": [ml + "2018/12/mylife-heemskerk.jpg"],
+  "Hendrik-Ido-Ambacht": [ml + "2019/01/my-life-ambacht-132-scaled.jpg"],
+  "Hoofddorp": [ml + "2026/04/pand-mylife-hoofddorp.jpg"],
+  "Mill": [ml + "2026/09/pand-mill-web-2.jpg"],
+  "Oostvoorne": [ml + "2026/09/pand-oostvoorne-voorkant.jpg"],
+  "Purmerend": [ml + "2025/06/purmerend-pand-web.jpg"],
+  "Roden": [ml + "2018/11/mylife-roden-web.jpg"],
+  "Rotterdam aan de Maas": [ml + "2018/12/mylife-maas-1.jpg"],
+  "Rotterdam Terbregge": [ml + "2018/12/terbregge.jpg"],
+  "Terborg": [ml + "2026/10/pand-terborg-web-v2-scaled.jpg"],
+  "Tilburg": [ml + "2024/09/pand-mylife-tilburg.jpg"],
+  "Velp": [ml + "2018/10/velp-gevel-e1775045122301.jpg"],
+  "Voorschoten": [ml + "2018/12/mylife-voorschoten.jpg"],
+  "Wageningen": [ml + "2018/09/mylife-wageningen.png"]
+};
+const leeg = 'linear-gradient(135deg,#1d2a2e,#14181c 60%,#2a2414)';
+const stil = location.search.includes('stil');
+const chips = document.getElementById('chips');
+function kies(i, rol) {
+  const c = clubs[i];
+  document.querySelectorAll('.chip').forEach((el, n) => el.classList.toggle('aan', n === i));
+  document.querySelectorAll('[data-naam]').forEach(el => { el.textContent = 'MyLife ' + c; if (!stil) { el.classList.remove('wissel'); void el.offsetWidth; el.classList.add('wissel'); } });
+  document.querySelector('[data-regel]').textContent = 'Met de eigen clubmanager van ' + c;
+  const f = foto[c], a = f ? `url("${f[0]}")` : leeg, b = f ? `url("${f[1] || f[0]}")` : leeg;
+  document.getElementById('s1').style.backgroundImage = a;
+  document.getElementById('s2').style.backgroundImage = b;
+  document.getElementById('s3').style.backgroundImage = a;
+  document.getElementById('nu').textContent = 'MyLife ' + c;
+  document.getElementById('status').textContent = f ?'Met de eigen foto van MyLife ' + c : 'De foto van deze club volgt';
+  if (rol) chips.children[i].scrollIntoView({ inline:'center', block:'nearest', behavior:'smooth' });
+}
+clubs.forEach((c, i) => { const b = document.createElement('button'); b.className = 'chip'; b.textContent = c; b.onclick = () => { gestopt = true; kies(i); }; chips.appendChild(b); });
+let gestopt = stil, nr = 0; kies(stil ? 18 : 0);
+if (stil) document.querySelectorAll('.toon').forEach(el => el.classList.add('zichtbaar'));
+new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { o.disconnect(); setInterval(() => { if (!gestopt) { nr = (nr + 1) % clubs.length; kies(nr); } }, 1900); } }, { threshold:.35 }).observe(document.querySelector('.schermen'));
+
+const zie = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('zichtbaar'); zie.unobserve(e.target); } }), { threshold:.12 });
+document.querySelectorAll('.toon').forEach(el => zie.observe(el));
+new IntersectionObserver(e => { const v = e[0].target; if (e[0].isIntersecting) { v.currentTime = 0; v.play().catch(() => {}); } else v.pause(); }, { threshold:.4 }).observe(document.getElementById('om3d'));
+// Opening: kaart, pand en lounge vloeien rustig in elkaar over
+const lagen = [...document.querySelectorAll('.held .laag')], duur = [9500, 5800, 7200]; let laag = 0;
+function toonLaag(i) {
+  const l = lagen[i];
+  if (l.tagName === 'VIDEO') { l.currentTime = 0; l.style.animation = 'none'; void l.offsetWidth; l.style.animation = ''; l.playbackRate = +l.dataset.tempo; l.play().catch(() => {}); }
+  else if (toonLaag.al) l.src = 'netwerk.svg?' + Date.now();
+  toonLaag.al = true;
+  lagen.forEach((x, k) => { x.classList.toggle('aan', k === i); if (k !== i && x.tagName === 'VIDEO') setTimeout(() => { if (!x.classList.contains('aan')) x.pause(); }, 4800); });
+  if (!stil) setTimeout(() => toonLaag((i + 1) % lagen.length), duur[i]);
+}
+toonLaag(0);
+function speelFilm() { const v = document.getElementById('hoofd'); document.getElementById('start').style.display = 'none'; v.controls = true; v.currentTime = 0; v.muted = false; v.play().catch(() => {}); }
+document.getElementById('start').addEventListener('click', speelFilm);
+document.getElementById('speel').addEventListener('click', () => setTimeout(speelFilm, 600));
+</script>
+</body>
+</html>
